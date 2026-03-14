@@ -1,0 +1,21 @@
+/* ── Extra CSS for Arunpandian's Analog IC Docs ── */
+
+/* Tighten up the monospace font weight in code blocks */
+.md-typeset code {
+  font-weight: 400;
+}
+
+/* Amber accent on hover for internal links — matches landing page */
+[data-md-color-accent="amber"] .md-typeset a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Slightly tighten table font size for dense parameter tables */
+.md-typeset table:not([class]) {
+  font-size: 0.8rem;
+}
+
+/* Make admonition titles slightly bolder */
+.md-typeset .admonition-title {
+  font-weight: 500;
+}

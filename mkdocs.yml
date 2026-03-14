@@ -1,0 +1,156 @@
+site_name: Arunpandian — Analog IC Design
+site_description: >
+  Project documentation and portfolio for analog CMOS IC design work
+  on 65nm custom process — bandgap references, op-amps, bias circuits, and VCOs.
+site_author: Arunpandian
+site_url: https://arunpandian-801.github.io/  # update when GitHub Pages is live
+
+# Repository link (shows on every page top-right)
+repo_name: QUCS-65nm-Workspace
+repo_url: https://github.com/arunpandian-801/QUCS-65nm-Workspace
+edit_uri: ""  # disables the "edit this page" pencil icon (Cadence files are NDA)
+
+# ── THEME ──────────────────────────────────────────────────────────────────────
+theme:
+  name: material
+  custom_dir: overrides
+
+  # Logo: built-in chip icon — no image file needed
+  icon:
+    logo: material/integrated-circuit-chip
+    repo: fontawesome/brands/github
+
+  favicon: overrides/assets/favicon.png  # optional: add a favicon later
+
+  # Color palette — dark default to match landing page
+  palette:
+
+    # Dark mode (default — matches landing page aesthetic)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # Light mode (clean, easy on eyes for long reading sessions)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  # Fonts — carried over from landing page for visual consistency
+  font:
+    text: DM Sans
+    code: IBM Plex Mono
+
+  # Features
+  features:
+    - navigation.tabs               # top-level sections as tabs
+    - navigation.tabs.sticky        # tabs stay visible on scroll
+    - navigation.sections           # expand sections in left sidebar
+    - navigation.indexes            # section index pages (overview per section)
+    - navigation.top                # back-to-top button
+    - navigation.footer             # prev/next page links in footer
+    - search.suggest                # search autocomplete
+    - search.highlight              # highlights search term on page
+    - content.code.copy             # copy button on code blocks
+    - content.code.annotate         # code annotations
+    - toc.follow                    # TOC sidebar follows scroll
+
+# ── NAVIGATION ─────────────────────────────────────────────────────────────────
+nav:
+  - Home: index.html
+  # - Home: index.md
+
+  - MOSFET Parameters:
+    - Sizes & Parameter Summary: mosfet/parameters.md
+
+  - References & Bias Circuits:
+    - Beta Multiplier Reference: references/bmr.md
+    - General Bias Circuit: references/general-bias.md
+    - Standard Bandgap Reference (1.22V): references/bgr-standard.md
+    - Low Voltage Bandgap Reference (0.61V): references/bgr-low-voltage.md
+
+  - Amplifiers:
+    - Rail-to-Rail Op-Amp: amplifiers/rtr-opamp.md
+
+  - Oscillators:
+    - Current Starved Ring VCO: oscillators/vco.md
+
+# ── PLUGINS ────────────────────────────────────────────────────────────────────
+plugins:
+  - search:
+      lang: en
+  - meta:
+      enabled: true
+
+# ── MARKDOWN EXTENSIONS ────────────────────────────────────────────────────────
+markdown_extensions:
+
+  # ── Python Markdown (built-in) ──
+  - toc:
+      permalink: true           # anchor links on every heading
+      title: On this page
+  - tables                      # Markdown tables
+  - footnotes                   # [^1] style footnotes
+  - attr_list                   # add HTML attributes to elements
+  - md_in_html                  # Markdown inside HTML blocks (needed for home page)
+  - admonition                  # note/warning/tip callout boxes
+
+  # ── PyMdown Extensions ──
+  - pymdownx.details            # collapsible admonition blocks
+  - pymdownx.superfences:       # fenced code blocks + diagram support
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:         # syntax highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite       # inline `code` highlighting
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.tabbed:            # content tabs (e.g. Cadence vs QUCS-S results)
+      alternate_style: true
+  - pymdownx.tasklist:          # - [x] checkbox lists
+      custom_checkbox: true
+  - pymdownx.critic             # markup for edits/comments (useful for review notes)
+  - pymdownx.caret              # superscript: x^2^
+  - pymdownx.tilde              # subscript: H~2~O
+  - pymdownx.keys               # keyboard keys: ++ctrl+c++
+  - pymdownx.smartsymbols       # (c) → © , --> → →
+  - pymdownx.emoji:             # emoji support
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption     # For adding Captions to an image
+
+  # ── Math (KaTeX via MathJax) ──
+  - pymdownx.arithmatex:
+      generic: true
+
+# ── EXTRA (MathJax, custom CSS) ────────────────────────────────────────────────
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+# ── FOOTER ─────────────────────────────────────────────────────────────────────
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arunpandian-801/QUCS-65nm-Workspace
+      name: QUCS-S Workspace on GitHub
+
+  # Disables "Made with Material for MkDocs" footer line (optional, keep if you want)
+  generator: false
+
+copyright: >
+  Copyright &copy; 2026 Arunpandian &nbsp;·&nbsp; Analog IC Design Engineer (Fresher), India

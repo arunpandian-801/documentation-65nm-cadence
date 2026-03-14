@@ -1,0 +1,3 @@
+# Ignore these directories only in the root directory
+/venv/
+/BAK/

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arunpandian — Analog IC Design Engineer</title>
+
+  <!-- ── SEO META TAGS ── -->
+  <meta name="description" content="Analog IC design Documentation cum portfolio of Arunpandian — 65nm custom CMOS circuits including bandgap references, rail-to-rail op-amps, bias circuits, and ring oscillators, simulated on Cadence Virtuoso and Spectre.">
+  <meta name="keywords" content="analog IC design, CMOS, 65nm, bandgap reference, op-amp, VCO, ring oscillator, Cadence Virtuoso, Spectre, QUCS-S, NGSpice, VLSI, fresher, India">
+  <meta name="author" content="Arunpandian">
+  <meta name="robots" content="index, follow">
+
+  <!-- ── OPEN GRAPH (LinkedIn / WhatsApp preview cards) ── -->
+  <meta property="og:title" content="Arunpandian — Analog IC Design Engineer Fresher">
+  <meta property="og:description" content="65nm custom CMOS analog IC design portfolio — bandgap references, rail-to-rail op-amps, bias circuits, and ring oscillators.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arunpandian-801.github.io/">
+
+  <!-- ── GOOGLE SITE VERIFICATION (fill in after Search Console setup) ── -->
+  <!-- <meta name="google-site-verification" content="[PASTE_YOUR_CODE_HERE]"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0e14;
+      --bg2:       #0f1520;
+      --bg3:       #141c2b;
+      --amber:     #e8a830;
+      --amber-dim: #b07a18;
+      --amber-glow:#e8a83022;
+      --teal:      #38c9b0;
+      --text:      #d4cfc4;
+      --text-dim:  #7a7568;
+      --border:    #1e2a3a;
+      --mono: 'IBM Plex Mono', monospace;
+      --serif: 'DM Serif Display', serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── GRID OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    /* ── NOISE GRAIN ── */
+    body::after {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    section, nav, footer { position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 3rem;
+      height: 60px;
+      background: rgba(11,14,20,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--amber);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--text-dim); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--amber); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 120px 3rem 80px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .hero-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+    .hero-label::before { content: '// '; color: var(--text-dim); }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      color: #eee8dc;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s forwards;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--amber);
+    }
+
+    .hero-sub {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      max-width: 540px;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.35s forwards;
+    }
+
+    .hero-cta {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .btn {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.75rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #0b0e14;
+      font-weight: 500;
+    }
+    .btn-primary:hover {
+      background: #f0c050;
+      box-shadow: 0 0 24px var(--amber-glow), 0 0 8px var(--amber-dim);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+
+    /* Waveform SVG decoration */
+    .hero-wave {
+      position: absolute;
+      right: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 42%;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 3rem;
+      display: flex; gap: 0; flex-wrap: wrap;
+      max-width: 1100px; margin: 0 auto;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.65s forwards;
+    }
+    .stat {
+      flex: 1; min-width: 160px;
+      padding: 0 2rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child { border-right: none; }
+    .stat-val {
+      font-family: var(--mono);
+      font-size: 1.6rem;
+      color: var(--amber);
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ── SECTION COMMONS ── */
+    .section-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 3rem;
+    }
+    .section-tag {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+    .section-tag::before { content: '§ '; color: var(--text-dim); }
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: #eee8dc;
+      margin-bottom: 3rem;
+      line-height: 1.1;
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg2); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .project-card {
+      background: var(--bg2);
+      padding: 2rem;
+      position: relative;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .project-card:hover { background: var(--bg3); }
+    .project-card:hover .card-arrow { opacity: 1; transform: translate(0,0); }
+    .card-date {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+    .card-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: #eee8dc;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    .card-specs {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+    }
+    .spec-tag {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.55rem;
+      background: var(--amber-glow);
+      border: 1px solid var(--amber-dim);
+      color: var(--amber);
+      border-radius: 2px;
+    }
+    .card-arrow {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      font-size: 1rem; color: var(--amber);
+      opacity: 0;
+      transform: translate(-4px, 4px);
+      transition: all 0.2s;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--bg); }
+    .skills-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .skill-group { margin-bottom: 2.5rem; }
+    .skill-group-title {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-list {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      list-style: none;
+    }
+    .skill-list li {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .skill-list li:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* Education / Timeline */
+    .timeline { list-style: none; }
+    .timeline li {
+      position: relative;
+      padding: 0 0 2rem 2rem;
+      border-left: 1px solid var(--border);
+    }
+    .timeline li:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .timeline li::before {
+      content: '';
+      position: absolute; left: -4px; top: 6px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--amber);
+      box-shadow: 0 0 8px var(--amber);
+    }
+    .tl-year {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--amber);
+      letter-spacing: 0.1em;
+    }
+    .tl-title {
+      font-size: 0.95rem;
+      color: #eee8dc;
+      font-weight: 400;
+      margin: 0.15rem 0;
+    }
+    .tl-sub {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ── CERTIFICATIONS ── */
+    #certifications { background: var(--bg2); }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .cert-card {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 3px;
+      background: var(--bg3);
+      transition: border-color 0.2s;
+    }
+    .cert-card:hover { border-color: var(--teal); }
+    .cert-issuer {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+    .cert-name {
+      font-size: 0.9rem;
+      color: #eee8dc;
+      line-height: 1.4;
+    }
+    .cert-date {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--text-dim);
+      margin-top: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--amber); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      #hero { padding: 100px 1.25rem 60px; }
+      .section-wrap { padding: 4rem 1.25rem; }
+      .stats-bar { padding: 1.5rem 1.25rem; flex-direction: column; gap: 0; }
+      .stat { border-right: none; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .stat-val { font-size: 1.3rem; }
+      .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .hero-wave { display: none; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Arunpandian <span>//</span> Analog IC</div>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="https://github.com/arunpandian-801/QUCS-65nm-Workspace" target="_blank">GitHub</a></li>
+      <li><a href="http://localhost:8000/mosfet/parameters/" class="btn btn-primary" style="padding:0.4rem 1rem; font-size:0.68rem;">Documentation →</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Oscilloscope waveform bg decoration -->
+    <svg class="hero-wave" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+      <polyline fill="none" stroke="#e8a830" stroke-width="1.5"
+        points="0,150 40,150 40,80 80,80 80,220 120,220 120,80 160,80 160,220 200,220 200,150 240,150 280,150 280,80 320,80 320,220 360,220 360,80 400,80 400,220 440,220 440,150 480,150 520,150 560,80 600,80"/>
+      <polyline fill="none" stroke="#38c9b0" stroke-width="1" opacity="0.5"
+        points="0,180 60,180 60,110 100,90 140,110 180,180 220,180 260,120 300,100 340,120 380,180 420,180 460,120 500,100 540,120 600,180"/>
+    </svg>
+
+    <div class="hero-label">Analog IC Design Engineer (Fresher)</div>
+    <h1>From Concept to Circuit<br/>at <em>65 nm</em></h1>
+    <p class="hero-sub">
+      Designing precision analog CMOS circuits — bandgap references, op-amps,
+      and oscillators — simulated on Cadence Virtuoso &amp; Spectre using a custom 65nm process node.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://github.com/arunpandian-801/QUCS-65nm-Workspace" target="_blank" class="btn btn-secondary">GitHub / QUCS-S Workspace</a>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-val">65 nm</span>
+      <span class="stat-label">Custom CMOS Process</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">4</span>
+      <span class="stat-label">Analog Blocks Simulated</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">1.2 V</span>
+      <span class="stat-label">Core Supply (VDD)</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">74.3 dB</span>
+      <span class="stat-label">Op-Amp Gain · Short-Channel · 10kΩ‖10pF</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">14.2 ppm/°C</span>
+      <span class="stat-label">Best TC (BGR)</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-wrap">
+      <div class="section-tag">Work</div>
+      <h2>Design Projects</h2>
+      <div class="projects-grid">
+
+        <a href="http://localhost:8000/oscillators/vco/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Feb 2026</div>
+          <div class="card-title">Voltage Controlled Oscillator</div>
+          <div class="card-desc">Current-starved, 7-stage ring VCO. 511 MHz centre frequency, 209.4 Mrad/s/V tuning gain over 0.4–1.0 V control range.</div>
+          <div class="card-specs">
+            <span class="spec-tag">f₀ = 511 MHz</span>
+            <span class="spec-tag">KVCO = 209.4 Mrad/s/V</span>
+            <span class="spec-tag">1.2 V</span>
+            <span class="spec-tag">Core 65nm</span>
+          </div>
+        </a>
+
+        <a href="http://localhost:8000/references/bgr-low-voltage/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Jan 2026</div>
+          <div class="card-title">Low Voltage Bandgap Reference</div>
+          <div class="card-desc">Parallel CTAT+PTAT current summation topology. 0.61 V output (~VDD/2), self-biased, 28.265 ppm/°C temperature coefficient.</div>
+          <div class="card-specs">
+            <span class="spec-tag">VREF = 0.61 V</span>
+            <span class="spec-tag">28.265 ppm/°C</span>
+            <span class="spec-tag">1.2 V supply</span>
+            <span class="spec-tag">Core 65nm</span>
+          </div>
+        </a>
+
+        <a href="http://localhost:8000/references/bgr-standard/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Dec 2025</div>
+          <div class="card-title">Standard Bandgap Reference</div>
+          <div class="card-desc">Series CTAT+PTAT voltage summation. 1.22 V silicon bandgap output, self-biased, 14.204 ppm/°C on I/O 500nm MOSFET.</div>
+          <div class="card-specs">
+            <span class="spec-tag">VREF = 1.22 V</span>
+            <span class="spec-tag">14.204 ppm/°C</span>
+            <span class="spec-tag">3.3 V supply</span>
+            <span class="spec-tag">I/O 500nm</span>
+          </div>
+        </a>
+
+        <a href="http://localhost:8000/amplifiers/rtr-opamp/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Oct 2025</div>
+          <div class="card-title">Rail-to-Rail Op-Amp</div>
+          <div class="card-desc">Folded cascode, parallel NMOS+PMOS input stages, Class AB output. Characterised across all three CMR regions under 10 kΩ ‖ 10 pF load.</div>
+          <div class="card-specs">
+            <span class="spec-tag">Gain 66.5–74.3 dB</span>
+            <span class="spec-tag">UGB 47.9–97.7 MHz</span>
+            <span class="spec-tag">PM 54–75°</span>
+            <span class="spec-tag">Core 65nm</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & EDUCATION -->
+  <section id="skills">
+    <div class="section-wrap">
+      <div class="section-tag">Background</div>
+      <h2>Skills &amp; Education</h2>
+      <div class="skills-layout">
+
+        <!-- Left: Skills -->
+        <div>
+          <div class="skill-group">
+            <div class="skill-group-title">EDA Tools</div>
+            <ul class="skill-list">
+              <li>Cadence Virtuoso</li>
+              <li>Spectre</li>
+              <li>QUCS-S</li>
+              <li>NGSpice</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Designed Analog Blocks</div>
+            <ul class="skill-list">
+              <li>Bandgap References</li>
+              <li>Bias Circuits (BMR)</li>
+              <li>Rail-to-Rail Op-Amp</li>
+              <li>Ring Oscillator / VCO</li>
+              <li>Comparators</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Process Experience</div>
+            <ul class="skill-list">
+              <li>65nm Custom CMOS</li>
+              <li>90nm GPDK</li>
+              <li>180nm Custom CMOS</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Education -->
+        <div>
+          <div class="skill-group-title" style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);">Education</div>
+          <ul class="timeline">
+            <li>
+              <div class="tl-year">2024 – 2025</div>
+              <div class="tl-title">M.Tech — VLSI Systems Design</div>
+              <div class="tl-sub">[College Name] &nbsp;·&nbsp; [City], India &nbsp;·&nbsp; Not completed</div>
+            </li>
+            <li>
+              <div class="tl-year">2019 – 2023</div>
+              <div class="tl-title">B.E. — Electronics &amp; Communication Engineering</div>
+              <div class="tl-sub">[College Name] &nbsp;·&nbsp; [City], India</div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-wrap">
+      <div class="section-tag">Credentials</div>
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-issuer">NPTEL — IIT</div>
+          <div class="cert-name">Analog IC Design</div>
+          <div class="cert-date">Jan – Apr 2023</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">NPTEL — IIT</div>
+          <div class="cert-name">Circuit Analysis for Analog Designers</div>
+          <div class="cert-date">Jan – Apr 2023</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Arunpandian &nbsp;·&nbsp; Analog IC Design Engineer (fresher), India</div>
+    <div class="footer-links">
+      <a href="https://github.com/arunpandian-801/QUCS-65nm-Workspace" target="_blank">GitHub</a>
+      <a href="#projects">Projects</a>
+      <a href="http://localhost:8000/mosfet/parameters/">Docs</a>
+    </div>
+  </footer>
+
+</body>
+</html>
