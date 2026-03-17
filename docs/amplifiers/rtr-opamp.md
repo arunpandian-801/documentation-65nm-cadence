@@ -26,6 +26,8 @@ The design of this circuit is pretty straightforward as the only challenge in th
 
 For the sake of convenience, those sizes are listed here:
 
+<a id="table-01"></a>
+
 | Flavour | W/L (Drawn) | W/L (Actual) | COMMENTS |
 |---------|-------------|--------------|----------|
 | NMOS-RVT | 43.1 / 2 | 2.8 µm / 130 nm | Same as standard size |
@@ -71,6 +73,8 @@ The nodes *OUT_P_BIAS* and *OUT_N_BIAS* are the outputs of the 1rst stage, i.e. 
 **Figure-03:** The Nodes OUT_P_BIAS and OUT_N_BIAS are shown in actual schematic for cross-reference with Figure-02.
 ///
 
+<a id="fig-04"></a>
+
 ![Output curve over ICMR](./rtr-opamp-assets/11_CommonModeSweep_dark.svg#only-dark)
 ![Output curve over ICMR](./rtr-opamp-assets/11_CommonModeSweep_light.svg#only-light)
 /// caption
@@ -114,9 +118,11 @@ Comparing this with [Figure-01](#fig-01), we can see that we're ***overcompensat
 !!! tip
     In amplifiers using one of the latter two methods (error feed forward or compensation)‚ the error at the output is not measured and corrected‚ but during design time the expected error of the active components is estimated and a correction circuit to remove this error is added.
 
-    \- *Structured Electronic Design, Negative-feedback Amplifiers: C.J.M Verhoeven, et al., Pg 29*
+    \- *Ref. Structured Electronic Design, Negative-feedback Amplifiers: C.J.M Verhoeven, et al., Pg 29*
 
 The above highlighted tip is the accurate representation of design style based on compensation. And as such, let's first see the AC response of uncompensated op-amp to see what we can possibly get and to choose f~ugb~.
+
+Naturally we will simulate with the worst case of \(V_{CM} = V_{DD}/2 = 0.6 V\), middle of cross-over region. Remember, we're trying to overcompensate the op-amp. So naturally, we will start from the worst case.
 
 To that end, the testbench for measuring Open loop response is shown in *Figure-06*. The simplified schematic of Testbench is shown in *Figure-07* and the results in *Figure-08*.
 
@@ -125,7 +131,7 @@ To that end, the testbench for measuring Open loop response is shown in *Figure-
 ![Open Loop Gain TB](./rtr-opamp-assets/01_Uncompensated_AC_TB_dark.png#only-dark)
 ![Open Loop Gain TB](./rtr-opamp-assets/01_Uncompensated_AC_TB_light.png#only-light)
 /// caption
-**Figure-06:** Opamp schematic with open loop gain measurement configuration.
+**Figure-06:** Opamp schematic with open loop gain measurement configuration. (V~CM~ = 0.6 V)
 ///
 
 <a id="fig-07"></a>
@@ -139,7 +145,7 @@ To that end, the testbench for measuring Open loop response is shown in *Figure-
 ![Open Loop Gain of Uncompensated op-amp](./rtr-opamp-assets/02_Uncompensated_AC_Results_dark.svg#only-dark)
 ![Open Loop Gain of Uncompensated op-amp](./rtr-opamp-assets/02_Uncompensated_AC_Results_light.svg#only-light)
 /// caption
-**Figure-08:** Open Loop Gain of uncompensated op-amp in Figure-06
+**Figure-08:** Open Loop Gain of uncompensated op-amp in Figure-06. (V~CM~ = 0.6 V)
 ///
 
 We can see that:
@@ -153,6 +159,8 @@ Improving DC gain is possible by implementing drain regulation in the cascode st
 I am not touching DC Gain here as our objective is just frequency compensation. In that case, let's make ***100 MHz*** as our unity gain bandwidth using compensation (as I want my op-amp as fast as possible after all).
 
 Remember that each of these capacitors affect their respective current change paths (Actually they do affect other ones too, but for the sake of design, this compromise is good enough for a first order approximation). And we also know the transconductance of input MOSFETs from [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table which is tabulated below for convenience:
+
+<a id="table-02"></a>
 
 | Flavour | g~m~ | COMMENTS |
 |---------|------|----------|
@@ -169,7 +177,7 @@ And the equation for unity gain frequency is:
 We will just use NMOS transconductance, g~mn~, and 100 MHz as our f~ugb~ to find the value for capacitance.
 
 !!! warning
-    As for why we're not using PMOS transconductance as well is because *Table-02* has approximate values for g~m~ (Depends on operating point) and trying to do precision design with that is stupidity.
+    As for why we're not using PMOS transconductance as well is because *Table-02* has approximate values for g~m~ (Depends on operating point) and trying to do precision design with that is stupidity. So taking just one of them is fine as we're doing just an approximate estimate with these values.
 
     Finding a capacitance from *Equation-01* merely gives us a starting point (kind of like an initial guess) to our design, and then we will iterate from there in simulations.
 
@@ -181,10 +189,199 @@ Plugging values into *Equation-01* gives,
 
 ### Iteration 1
 
-Let's see the open loop response for three different values: 190 fF, 250 fF, and 300 fF. As for how I got those other two values, do note that 190 fF is close to 200 fF. And from 200 fF I took two other values with a step of 50 fF each. If this proves not enough, we can use a step of 100 fF or even 200 fF between consecutive values in each of our simulations.
+Let's see the open loop response for three different values for C~c~: 190 fF, 250 fF, and 300 fF. As for how I got those other two values, do note that 190 fF is close to 200 fF. And from 200 fF I took two other values with a step (difference) of 50 fF each. If this proves to be not enough, we can use a step of 100 fF or even 200 fF between consecutive values in each of our simulations.
 
 Also, I won't replace 190 fF with 200 fF, since it would be useful to see what response our hand-calculated value yields.
 
 The testbench remains same as [Figure-07](#fig-07), with the modifications on [Figure-05](#fig-05) applied to schematic of [Figure-06](#fig-06) with capacitor values of 190 fF, 250 fF and 300 fF in each step.
 
-The results are
+The simulation results are seen in *Figure-09* and the key performance parameters are tabulated in [Table-03](#table-03).
+
+![AC results iteration 1 - 1](./rtr-opamp-assets/15_Iteration1_01_results_dark.svg#only-dark)
+![AC results iteration 1 - 1](./rtr-opamp-assets/15_Iteration1_01_results_light.svg#only-light)
+
+<a id="fig-09-c"></a>
+
+![AC results iteration 1 - 2](./rtr-opamp-assets/15_Iteration1_02_results_dark.svg#only-dark)
+![AC results iteration 1 - 2](./rtr-opamp-assets/15_Iteration1_02_results_light.svg#only-light)
+/// caption
+**Figure-09:** AC Simulation result of open loop gain for: (a) 190 fF, (b) 250 fF and \(c) 300 fF C~c~ values. (V~CM~ = 0.6 V)
+///
+
+<a id="table-03"></a>
+
+| C~c~ | f~ugb~ | Φ~ugb~ | Φ~margin~ |
+|------|--------|--------|-----------|
+| 190 fF | 112.6 MHz | -144.2° | 35.8° |
+| 250 fF | 100 MHz | -132.2° | 47.8° |
+| 300 fF | 86.5 MHz | -121.9° | 58.1° |
+/// caption
+**Table-03:** Iteration 1 AC open loop response key parameters for V~CM~ of 0.6 V (Cross-over region).
+///
+
+From *Table-03*, one can clearly see that the hand-calculated value of 190 fF gave us an f~ugb~ which is in the ball-park of our target value of 100 MHz. That's reassuring to see, but the phase margin is too low for a stable operation across all feedback factors.
+
+250 fF gives our target f~ugb~, but it would have been our final choice **if** the phase margin was slightly higher (above 50°).  
+300 fF gives a really good phase margin, but the f~ugb~ is below our target value.
+
+And so we have two options:
+
+- Accept 300 fF as our final choice with a slightly lower f~ugb~.
+- Improve phase margin of 250 fF case as it gives an f~ugb~ that is close to our target value.
+
+!!! question
+    You might think that aiming for 50° is still risky. And you're right. But think about our compensation strategy. ***We're overcompensating*** the op-amp. So, if I design for a phase margin of say, 75° or even 80° (just like any standard *sane* design) for just the cross-over region, that will definitely result in even larger phase margin for ICMR outside this region. ***Too large a phase margin will result in slower op-amps*** (As you will see in transient simulation section). It's a trade-off: Stability vs Speed of closed loop system.
+
+Let's set aside the 300 fF as our fall-back option, and let's iterate once more.
+
+### Iteration 2
+
+If you look closely at [Figure-09-\(c)](#fig-09-c), you can see that the output pole is close to f~ugb~ and is the culprit which ends up eating our phase margin. This is inevitable as we have a heavy load at the output (10 kΩ || 10 pF).
+
+But still, if we can move this pole, *even slightly away*, that should free up some phase margin for our **250 fF** case.
+
+To that end our only option is to increase current in the output stage.
+
+#### Increasing Current in output stage
+
+!!! tip
+    ... the quiescent current that flows in these devices (output NMOS and PMOS) ... To reduce this current, we can increase the lengths of the floating current sources (class AB Biasing MOSFETs - LVT) used in the folded-cascode section. This increases their gate-source voltage drops and moves the gates of the push-pull MOSFETs (output NMOS and PMOS) towards the power supply rails (shutting them off).
+
+    \- *Ref. CMOS Circuit Design, Layout and Simulation, Pg 835.*
+
+Even though the above tip gives us ways to reduce current, we will do the reverse (increase width) to achieve more current.
+
+So we have two cranks for increasing current in output stage:
+
+- Increase width of the class AB Biasing LVT MOSFETs (aka Floating Current sources) to reduce V~GS~ dropped from biasing voltage. Which in turn increases V~GS~ of output MOSFETs.
+- Increase width of output MOSFETs.
+
+Let's do both.
+
+##### Adjust Class AB Biasing LVT MOSFETs (aka Floating Current sources)
+
+It sounds simple enough, but ***by how much should I increase this size?***
+
+The answer to that question remains in our [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table. Think about it, you want to build an op-amp with predictable performance. And to achieve that, we have choosen sizes and tabulated performance characteristics for those sizes in order to conduct design of complex circuits.
+
+So ***it makes sense to always aim for our (chosen) desired operating point of each and every MOSFET in any circuit.***
+
+We intend to adjust the sizes of the Floating current sources (Class AB Biasing LVT MOSFETs. Known by this term from now on for ease of typing) to ***set the biasing voltages of our output RVT MOSFETs to V~GS~ generated by our bias circuit.*** This was not the case before, because, we generated \(2 * V_{GS}\) for biasing our output MOSFETs (See the discussion on [Sizing Class AB Bias Voltage Generation MOSFET](/references/general-bias/#sizing-class-ab-bias-voltage-generation-mosfet) and [Biasing a Class AB output stage](/references/general-bias/#biasing-a-class-ab-output-stage) to understand what I mean by this) and that gets dropped more on our Floating Current sources. This is exactly why we even opted for increasing width of Floating Current sources.
+
+I will put that intent in bullets for you to understand what I mean by this:
+
+- Size Floating Current source, so that gate voltages of output MOSFETs match the voltage generated from bias circuit (*V~biasn~ and V~biasp~*).
+- While doing so, aim for a current of 5 µA in each of those MOSFETs.
+
+!!! warning
+    In doing this, we have intentionally introduced a mismatch between the bias voltage generation MOSFET for floating current source and the MOSFET biased with that voltage. Such things must be well characterized across process corner variations before approving for production. The only reason why we even attempted to do this is because sufficiently wider and shorter MOSFETs tends to have little variations in their threshold voltage. There *IS* a mismatch, but it would be tolerable.
+
+!!! warning
+    Think of the above proposed steps as a **guideline** and nothing more. There is no way to set a current of 5 µA precisely in each of the floating current source nor to attain a specific V~GS~ drop that leaves a voltage that is close to what the bias circuit has generated in a physically realized circuit. The point of aiming for a specific current and a voltage is to define a goal which allows us to size these MOSFETs to attain an improvement in overall performance. This is done in order to avoid from mindlessly choosing sizes.
+
+    Again, do not attempt for precision design.
+
+*Figure-10* shows the DC annotated testbench to size Floating Current Sources. Notice how the necessary voltage conditions are copied using a VCVS to replicate the desired operating point. Also notice that both MOSFETs are roughly conducting a current of 5 µA.
+
+![Floating Current MOSFET Sizing](./rtr-opamp-assets/12_FloatingCurrSrc_Sizing_TB_dark.png#only-dark)
+![Floating Current MOSFET Sizing](./rtr-opamp-assets/12_FloatingCurrSrc_Sizing_TB_light.png#only-light)
+/// caption
+**Figure-10:** DC Annotated Floating Current Source sizing test bench.
+///
+
+The sizes chosen in *Figure-10* has become the **new** sizes for our Floating Current Source MOSFETs (LVT).
+
+They are tabulated in *Table-04:*
+
+| Flavour | W/L (Drawn) | W/L (Actual) |
+|---------|-------------|--------------|
+| NMOS-LVT | 26.2 / 2 | 1.7 µm / 130 nm |
+| PMOS-LVT | 66.2 / 2 | 4.3 µm / 130 nm |
+/// caption
+**Table-04:** New sizes for Floating Current Source MOSFETs (or Class AB Biasing MOSFETs)
+///
+
+##### Increase widths of output MOSFETs
+
+Our output MOSFETs are already 10 times wider than standard RVT Sizes. Let's double it, and make it 20 times wider and see what happens.
+
+#### Results of these two changes
+
+Again the same three compensation capacitors: 190 fF, 250 fF, and 300 fF. New sizes for Floating current sources from *Table-04*, and output MOSFETs are now ***20 times*** the standard sizes listed in [Table-01](#table-01).
+
+![AC results iteration 2 - 1](./rtr-opamp-assets/16_Iteration2_01_results_dark.svg#only-dark)
+![AC results iteration 2 - 1](./rtr-opamp-assets/16_Iteration2_01_results_light.svg#only-light)
+/// caption
+**Figure-11:** AC Simulation result of open loop gain for: (a) 190 fF, (b) 250 fF with the changes made. (Skipped 300 fF case as 250 fF has satisfied our f~ugb~ and phase margin conditions) (V~CM~ = 0.6 V)
+///
+
+| C~c~ | f~ugb~ | Φ~ugb~ | Φ~margin~ |
+|------|--------|--------|-----------|
+| 190 fF | 112.6 MHz | -139.2° | 40.8° |
+| 250 fF | 96.9 MHz | -126.4° | 53.6° |
+/// caption
+**Table-05:** Iteration 2 AC open loop response key parameters for a V~CM~ of 0.6 V (Cross-over region).
+///
+
+Clearly from *Table-05* and *Figure-11* we can see that with our new changes, 250 fF itself has achieved a phase margin of 53.6° with f~ugb~ closer to target of 100 MHz.
+
+300 fF case is skipped, as 250 fF itself has gone sligthly lower than target of 100 MHz. Anymore increase in C~c~ will definitely lower f~ugb~ even lower than 250 fF case. Also, why bother with a waste run when we've already met our requirements?
+
+Now comes the moment of truth. ***What do we get outside cross-over region?***
+
+#### Open loop response with V~CM~ outside cross-over region
+
+Let's see the open loop response with common mode voltage outside cross-over region. The V~CM~ values taken to see only PMOS and only NMOS input diff amp are 0.2 V and 1.0 V (A value within their ICMRs, see [Figure-04](#fig-04) and the associated discussion beneath it) respectively.
+
+![AC Results outside crossover](./rtr-opamp-assets/16_Iteration2_02_VariousVCM_results_dark.svg#only-dark)
+![AC Results outside crossover](./rtr-opamp-assets/16_Iteration2_02_VariousVCM_results_light.svg#only-light)
+/// caption
+**Figure-12:** AC Simulation result of open loop gain for: (a) V~CM~ of 0.2 V and (b) V~CM~ of 1.0 V.
+///
+
+| V~CM~ | f~ugb~ | Φ~ugb~ | Φ~margin~ | A~DC~ |
+|-------|--------|--------|-----------|-------|
+| 0.2 V | 52.4 MHz | -105.1° | 74.9° | 67.1 dB |
+| 1.0 V | 47.5 MHz | -110.4° | 69.6° | 69.5 dB |
+/// caption
+**Table-06:** Iteration 2 AC open loop response key parameters outside cross-over region.
+///
+
+Some observations:
+
+- The phase margins are good in both cases.
+- Reduction in f~ugb~ is trivial considering the fact that we've overcompensated the op-amp for the cross-over region (both input Diff-amps ON case).
+- **Reduction in DC gain** is also due to one of the diff-amps turning OFF. Gain of cascode stage with both ON is \((g_{mn} + g_{mp}) * r_{out}\) and only \(g_{mn} * r_{out}\) or \(g_{mp} * r_{out}\) based on which input diff-amp is ON.
+
+!!! note ""
+    From [Table-02](#table-02), the transconductance of NMOS and PMOS is roughly same (\(g_{mn} \approx g_{mp}\)) and ***so we roughly see the gain getting reduced to half of what it was in cross-over region***.
+
+    Reduced by half means 6 dB lower. So we can expect to see a gain of \(74.9~dB - 6~dB = 68.9~dB\) and our simulated values are also closer to that.
+
+Now we know that the op-amp is fully compensated and let's put it in follower configuration and see what happens when we apply a large step from 0.1 V to 1.1 V.
+
+## TRANSIENT Simulations
+
+The final schematic of op-amp is shown in *Figure-13*.
+
+![Final op-amp schematic](./rtr-opamp-assets/07_Rail_to_rail_Schematic_full_dark.png#only-dark)
+![Final op-amp schematic](./rtr-opamp-assets/07_Rail_to_rail_Schematic_full_light.png#only-light)
+/// caption
+**Figure-13:** Final Schematic of Rail-to-rail input, class AB output op-amp. (Bias circuit not shown)
+///
+
+This final schematic should be compared with [Figure-01](#fig-01). Clearly, we have overcompensated the op-amp, and should expect to see a really slow response to this large step. This is expected as we're stepping from 0.1 V to 1.1 V, both of these are outside cross-over region and as such only one input diff-amp will be able to react to it at a time.
+
+![Transient Step TB](./rtr-opamp-assets/17_Transient_FollowerConfig_TB_simplified_dark.svg#only-dark)
+![Transient Step TB](./rtr-opamp-assets/17_Transient_FollowerConfig_TB_simplified_light.svg#only-light)
+/// caption
+**Figure-14:** Op-amp of Figure-13 in follower config with a large step input.
+///
+
+![Step Response](./rtr-opamp-assets/06_FollowerConfig_Tran_dark.svg#only-dark)
+![Step Response](./rtr-opamp-assets/06_FollowerConfig_Tran_light.svg#only-light)
+/// caption
+**Figure-15:** Step response of Opamp of Figure-13.
+///
+
+The op-amp is showing a slow but stable response as discussed before.

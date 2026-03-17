@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Title: C:/Documents/Basic Projects/Cadence/Libraries/DOCUMENTATION/docs/amplifiers/rtr-opamp-assets/14_Uncompensated_AC_TB_Simplified_light
+%%Title: C:/Documents/Basic Projects/Cadence/Libraries/DOCUMENTATION/docs/amplifiers/rtr-opamp-assets/17_Transient_FollowerConfig_TB_simplified_light
 %%Creator: XCircuit v3.4 rev10
-%%CreationDate: Tue Mar 17 23:57:02 2026
+%%CreationDate: Wed Mar 18 00:52:43 2026
 %%Pages: 1
-%%BoundingBox: 68 68 465 248
+%%BoundingBox: 68 68 429 248
 %%DocumentNeededResources: font Helvetica font Times-Roman font Symbol 
 %%EndComments
 %%BeginProlog
@@ -229,36 +229,6 @@ begingate
 endgate
 } def
 
-/source {
-% hidden
-begingate
-1 1.00 0 0 32 0.00 360.00 xcarc
-1 1.00 0 32 0 64 2 polygon
-1 1.00 0 -32 0 -64 2 polygon
-endgate
-} def
-
-/acsource {
-begingate
-1.00 0 0 0 source
-1 0.80 0 -48 0 48 -16 0 16 0 spline
-1.000 0.000 0.000 scb
-(s.p) {/Times-Roman cf} 2 9 0 1.00 0 64 pinlabel
-(s.m) {/Times-Roman cf} 2 13 0 1.00 0 -64 pinlabel
-endgate
-} def
-
-/vsource {
-begingate
-1.00 0 0 0 source
-(+) {/Symbol cf} 2 5 0 1.00 0 18 label
-(-) {/Symbol cf} 2 5 0 1.00 0 -18 label
-1.000 0.000 0.000 scb
-(v.p) {/Times-Roman cf} 2 9 0 1.00 0 64 pinlabel
-(v.m) {/Times-Roman cf} 2 13 0 1.00 0 -64 pinlabel
-endgate
-} def
-
 
 %%EndSetup
 
@@ -266,11 +236,11 @@ endgate
 %%PageOrientation: Portrait
 /pgsave save def bop
 1.0000 inchscale
-2.6000 setlinewidth 784 508 translate
+2.6000 setlinewidth 688 508 translate
 
 -1.00 180 -112 64 opamp
 (Op-amp) {/Helvetica 0.500 cf} {/Helvetica cf} 3 16 0 1.00 -176 64 label
-(Fig-06) {/Helvetica 0.500 cf} {/Helvetica cf} 3 16 0 1.00 -176 32 label
+(Fig-13) {/Helvetica 0.500 cf} {/Helvetica cf} 3 16 0 1.00 -176 32 label
 1.00 0 112 -192 resistor
 (10 k) {/Helvetica cf} 2 16 0 1.00 144 -192 label
 1.00 0 304 -192 capacitor
@@ -279,27 +249,22 @@ endgate
 1 1.00 112 -128 112 64 2 polygon
 1.00 0 112 -256 gnd
 1.00 0 304 -256 gnd
-1.00 270 -128 -96 resistor
 1 1.00 -64 -96 16 -96 16 64 3 polygon
-1.00 0 -256 -192 capacitor
-1 1.00 -192 -96 -256 -96 -256 -128 3 polygon
 1 1.00 -256 -96 -256 0 -192 0 3 polygon
-1.00 0 -256 -256 gnd
 1.00 0 16 64 dot
 1.00 0 112 64 dot
-1.00 0 -256 -96 dot
 1.00 0 352 64 circle
 1 1.00 304 64 352 64 2 polygon
-1 1.00 -192 112 -416 112 -416 0 3 polygon
-1.00 0 -416 -64 acsource
-1.00 0 -416 -192 vsource
-1.00 0 -416 -256 gnd
-(large) {ss} (R) {/Helvetica cf} 4 16 0 1.00 -160 -144 label
-(large) {ss} (C) {/Helvetica cf} 4 16 0 1.00 -208 -208 label
-(CM) {ss} (V) {/Helvetica cf} 4 16 0 1.00 -544 -192 label
-(ac) {ss} (V) {/Helvetica cf} 4 16 0 1.00 -544 -80 label
+1 1.00 -192 112 -352 112 -352 0 3 polygon
+1.00 0 -352 -256 gnd
 (OUT) {/Helvetica cf} 2 16 0 1.00 304 96 label
-(\( 0.6 V \)) {/Helvetica cf} 2 16 0 1.00 -592 -256 label
+1 1.00 -352 -176 35 0.00 360.00 xcarc
+1 1.00 -368 -192 -352 -192 -352 -160 -336 -160 4 polygon
+(0.1 V) {/Helvetica cf} 2 16 0 1.00 -496 -240 label
+(1.1 V) {/Helvetica cf} 2 16 0 1.00 -496 -160 label
+1 1.00 -352 -256 -352 -208 2 polygon
+1 1.00 -352 -144 -352 0 2 polygon
+1 1.00 -64 -96 -256 -96 2 polygon
 pgsave restore showpage
 
 %%Trailer
