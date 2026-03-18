@@ -29,7 +29,7 @@ For designing this, we need to choose values for two things:
 
 Since we have already designed the [BMR](/references/bmr/) for 10 µA, the general bias circuit will also generate bias voltages for 10 µA. For different current, **we have to redesign the BMR** as simply using a different size for a specific current will result in mismatch.
 
-!!! tip
+!!! quote
     It is strongly recommended that analog designers use only a small set of “unit-sized” transistors, forming all transistors from parallel combinations of these elementary devices.
 
     \- *Ref. Analog Integrated Circuit design: Tony Chan Caruson, David A. Johns and Kenneth W. Martin, Pg 51*
@@ -38,7 +38,7 @@ Since we have already designed the [BMR](/references/bmr/) for 10 µA, the gener
 
 Unlike general design procedure, we will not choose any specific V~GS~ and then find W/L. Instead we will size this MOSFET while keeping a considerable margin in the design space.
 
-!!! note
+!!! info
     That is, we will choose a MOSFET that is smaller than 1\/5th of our standard size. This number 1\/5 is found using square law equation and solving for this topology (actually it is 1\/4th, but that will bias M1 and M2 in *Figure-02* at the edge of saturation. 1\/5th will bias at slightly into saturation.)
 
 <a id="fig-02"></a>

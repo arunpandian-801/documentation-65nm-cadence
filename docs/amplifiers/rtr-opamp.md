@@ -96,8 +96,10 @@ In the cross-over region, both input diff-amps are ON. And so both will contribu
 
 To realize a fully compensated op-amp, we have to account for this worst case (*cross-over region*, both N and P Diff-amps ON) which makes the **op-amp slower** when only one input stage (Either N or P Diff-amp) is ON.
 
+<a id="note-collapse-1"></a>
+
 ??? note
-    There are ways to mitigate this problem by implementing constant g~m~ for all three cases (Only N, only P and both N and P Diff-amps ON) \[Ref. *Operational Amplifiers, Johan Huijsing, section 4.4*], but such modifications are beyond the scope of this documentation.
+    There are ways to mitigate this problem by implementing constant g~m~ for all three cases (Only N, only P and both N and P Diff-amps ON), i.e. making the total transconductance available at all time the same by modifying the input stage to get \(g_{mn} + g_{mp} \approx g_{mn,only} \approx g_{mp,only}\) \[Ref. *Operational Amplifiers, Johan Huijsing, section 4.4*], but such modifications are beyond the scope of this documentation.
 
 ### Frequency compensation strategy
 
@@ -115,12 +117,12 @@ Comparing this with [Figure-01](#fig-01), we can see that we're ***overcompensat
 
 ### Compensating the op-amp
 
-!!! tip
+!!! quote
     In amplifiers using one of the latter two methods (error feed forward or compensation)‚ the error at the output is not measured and corrected‚ but during design time the expected error of the active components is estimated and a correction circuit to remove this error is added.
 
     \- *Ref. Structured Electronic Design, Negative-feedback Amplifiers: C.J.M Verhoeven, et al., Pg 29*
 
-The above highlighted tip is the accurate representation of design style based on compensation. And as such, let's first see the AC response of uncompensated op-amp to see what we can possibly get and to choose f~ugb~.
+The above highlighted quote is the accurate representation of design style based on compensation. And as such, let's first see the AC response of uncompensated op-amp to see what we can possibly get and to choose f~ugb~.
 
 Naturally we will simulate with the worst case of \(V_{CM} = V_{DD}/2 = 0.6 V\), middle of cross-over region. Remember, we're trying to overcompensate the op-amp. So naturally, we will start from the worst case.
 
@@ -244,12 +246,12 @@ To that end our only option is to increase current in the output stage.
 
 #### Increasing Current in output stage
 
-!!! tip
+!!! quote
     ... the quiescent current that flows in these devices (output NMOS and PMOS) ... To reduce this current, we can increase the lengths of the floating current sources (class AB Biasing MOSFETs - LVT) used in the folded-cascode section. This increases their gate-source voltage drops and moves the gates of the push-pull MOSFETs (output NMOS and PMOS) towards the power supply rails (shutting them off).
 
     \- *Ref. CMOS Circuit Design, Layout and Simulation, Pg 835.*
 
-Even though the above tip gives us ways to reduce current, we will do the reverse (increase width) to achieve more current.
+Even though the above quote gives us ways to reduce current, we will do the reverse (increase width) to achieve more current.
 
 So we have two cranks for increasing current in output stage:
 
@@ -385,3 +387,68 @@ This final schematic should be compared with [Figure-01](#fig-01). Clearly, we h
 ///
 
 The op-amp is showing a slow but stable response as discussed before.
+
+But this is not painting the full picture. In *Figure-15*, we are stepping from 0.1 V to 1.1 V and both of these are outside cross-over region.
+
+***What happens when we step within cross-over region??***
+
+### Stepping within cross-over region - worst case
+
+From [Figure-04](#fig-04), we can see that the cross-over region is from 0.4 V to 0.85 V. Let's step within this region.
+
+And for a worst case scenario, let's step around 0.6 V as both input diff-amps are guarenteed to be ON, and that shows how stable our op-amp is.
+
+<a id="fig-16"></a>
+
+![Stepping within cross-over](./rtr-opamp-assets/06_FollowerConfig_Tran_02_550mV_to_650mV_dark.svg#only-dark)
+![Stepping within cross-over](./rtr-opamp-assets/06_FollowerConfig_Tran_02_550mV_to_650mV_light.svg#only-light)
+/// caption
+**Figure-16:** Stepping within the cross-over region. (0.55 V to 0.65 V input step).
+///
+
+!!! success ""
+    Don't be scared by seeing this response as the overshoot is just a mere 20 mV. The voltage scale on this curve is just 10 mV/div.
+
+    Rather what should scare you is the settling time, as it takes 20 ns for ringing to die down even the step up and down itself happens in less that 10 ns.
+
+This result is not surprising considering the fact that there's just a phase margin of 50° (53.6° to be precise). But this is inevitable considering the fact that we haven't implemented any constant-g~m~ control at the input stage (See the [Collapsable note](#note-collapse-1) for more info).
+
+!!! quote
+    To make sure a feedback circuit does not oscillate observe the pulse response. If there is ringing with ***fewer than 4 peaks***, the circuit is **stable**.
+
+    \- *Ref. Desigining Analog Chips, Hans Camenzind, Pg. 6-14*
+
+But this ringing is considered stable as per the above quote and we will stop the worst case discussion here.
+
+### Stepping from and to cross-over region - extra cases
+
+For the sake of completeness, let's also see what happens when I step from cross-over region and to cross-over region.
+
+![Step from and to cross-over](./rtr-opamp-assets/06_FollowerConfig_Tran_05_04and03_Combined_dark.svg#only-dark)
+![Step from and to cross-over](./rtr-opamp-assets/06_FollowerConfig_Tran_05_04and03_Combined_light.svg#only-light)
+/// caption
+**Figure-17:** Stepping (a) from cross-over region (0.6 V to 1.1 V) and (b) to cross-over region (0.1 V to 0.6 V).
+///
+
+Notice how settling is shorter when you reach cross-over region. In case (a) the output step down takes just 10 ns while step up takes 20 ns. And in case (b) the output step up takes 10 ns and step down takes 20 ns. This happens because both input differential amplifiers are active in the crossover region, causing changes in the cascode stack to occur more rapidly compared to when only one differential amplifier is on.
+
+In both cases, you can see ringing when op-amp tries to settle in cross-over region, but it is not as bad as [Figure-16](#fig-16).
+
+## Conclusion
+
+The design of rail-to-rail input class AB output op-amp is complete.
+
+The achieved specs are summarised below:
+
+| V~CM~ | A~DC~ | f~ugb~ | Φ~margin~ |
+|-------|-------|--------|-----------|
+| 0.2 V | 67.1 dB | 52.4 MHz | 74.9° |
+| 0.6 V | 74.9 dB | 96.9 MHz | 53.6° |
+| 1.0 V | 69.5 dB | 47.5 MHz | 69.6° |
+/// caption
+**Table-07:** Spec summary
+///
+
+## QUCS-S / NGSPICE simulations
+
+This circuit is also built and tested in [QUCS-S](https://ra3xdh.github.io/) / [NGSPICE](https://ngspice.sourceforge.io/) and the simulation results are available in [this document](https://drive.google.com/file/d/1FoIW39QAYbu-UY1ACLr4fn-CPb8MJKg4/view?usp=drive_link).
