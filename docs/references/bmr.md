@@ -28,7 +28,7 @@ For designing this, we need to chose values for three things:
 
 For this documentation, the output current is chosen to be **10 µA**.
 
-The MOSFET sizes have already been selected for this current, and their parameters are thoroughly listed in [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table. For the sake of convenience, sizes are listed here:
+The MOSFET sizes have already been selected for this current, and their parameters are thoroughly listed in [Regular Threshold Voltage (RVT)](../mosfet/parameters.md#regular-threshold-voltage-rvt) table. For the sake of convenience, sizes are listed here:
 
 <a id="table-01"></a>
 
@@ -185,7 +185,7 @@ To that end, we have two options:
 
 The error amp is driving the gate of BMR PMOS which is a high impedance node. This can be made the dominant pole by adding capacitance to it.
 
-[Mosfet as a capacitor](/mosfet/parameters/#core-device-65-nm_2) Table has capacitance values for some standard sizes, which are repeated here for convenience:
+[Mosfet as a capacitor](../mosfet/parameters.md#core-device-65-nm_2) Table has capacitance values for some standard sizes, which are repeated here for convenience:
 
 | Flavour | Drawn Size | Actual Size | V~G~ | Nominal Capacitance |
 |---------|------------|-------------|------|---------------------|

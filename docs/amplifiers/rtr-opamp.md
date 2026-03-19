@@ -22,7 +22,7 @@ Before we proceed, let's take a look at the schematic of this op-amp.
 
 ### Design Considerations
 
-The design of this circuit is pretty straightforward as the only challenge in this is frequency compensation. Biasing is done by [General Bias Circuit](/references/general-bias/#general-bias-circuit) and the sizes are from [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table and **half the sizes** noted in [Low Threshold Voltage (LVT)](/mosfet/parameters/#low-threshold-voltage-lvt) table respectively.
+The design of this circuit is pretty straightforward as the only challenge in this is frequency compensation. Biasing is done by [General Bias Circuit](../references/general-bias.md) and the sizes are from [Regular Threshold Voltage (RVT)](../mosfet/parameters.md#regular-threshold-voltage-rvt) table and **half the sizes** noted in [Low Threshold Voltage (LVT)](../mosfet/parameters.md#low-threshold-voltage-lvt) table respectively.
 
 For the sake of convenience, those sizes are listed here:
 
@@ -39,14 +39,14 @@ For the sake of convenience, those sizes are listed here:
 ///
 
 !!! note ""
-    It is strongly advised to review the documentation of the [General Bias Circuit](/references/general-bias/#general-bias-circuit) before moving forward with this one. Particularly pay attention to the discussion on:
+    It is strongly advised to review the documentation of the [General Bias Circuit](../references/general-bias.md) before moving forward with this one. Particularly pay attention to the discussion on:
 
-    - [Sizing Class AB Bias Voltage Generation MOSFET](/references/general-bias/#sizing-class-ab-bias-voltage-generation-mosfet)
-    - [Biasing a Class AB output stage](/references/general-bias/#biasing-a-class-ab-output-stage)
+    - [Sizing Class AB Bias Voltage Generation MOSFET](../references/general-bias.md#sizing-class-ab-bias-voltage-generation-mosfet)
+    - [Biasing a Class AB output stage](../references/general-bias.md#biasing-a-class-ab-output-stage)
 
 ### Load Considerations
 
-Thanks to class AB output stage, this op-amp is capable of driving low impedance (or heavy) loads. So, the load taken for this documentation is a resistor of 10 kΩ in parallel with a capacitor of 10 pF (10 kΩ || 10 pF). And as such, the output stage MOSFETs are 10 times (just a general number. A good starting point for heavy loads. If this proves insufficient, we will increase it.) the sizes listed in [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table.
+Thanks to class AB output stage, this op-amp is capable of driving low impedance (or heavy) loads. So, the load taken for this documentation is a resistor of 10 kΩ in parallel with a capacitor of 10 pF (10 kΩ || 10 pF). And as such, the output stage MOSFETs are 10 times (just a general number. A good starting point for heavy loads. If this proves insufficient, we will increase it.) the sizes listed in [Regular Threshold Voltage (RVT)](../mosfet/parameters.md#regular-threshold-voltage-rvt) table.
 
 !!! info
     Since this schematic diagram is quite large, I don't want to repeat it for every single simulation. Therefore, the schematic shown in [Figure-06](#fig-06) should be our starting point, and it will remain as the one we use until compensation is completed. All testbenches will include a symbol representing an op-amp that abstracts this schematic for simplicity until told otherwise.
@@ -160,7 +160,7 @@ Improving DC gain is possible by implementing drain regulation in the cascode st
 
 I am not touching DC Gain here as our objective is just frequency compensation. In that case, let's make ***100 MHz*** as our unity gain bandwidth using compensation (as I want my op-amp as fast as possible after all).
 
-Remember that each of these capacitors affect their respective current change paths (Actually they do affect other ones too, but for the sake of design, this compromise is good enough for a first order approximation). And we also know the transconductance of input MOSFETs from [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table which is tabulated below for convenience:
+Remember that each of these capacitors affect their respective current change paths (Actually they do affect other ones too, but for the sake of design, this compromise is good enough for a first order approximation). And we also know the transconductance of input MOSFETs from [Regular Threshold Voltage (RVT)](../mosfet/parameters.md#regular-threshold-voltage-rvt) table which is tabulated below for convenience:
 
 <a id="table-02"></a>
 
@@ -264,11 +264,11 @@ Let's do both.
 
 It sounds simple enough, but ***by how much should I increase this size?***
 
-The answer to that question remains in our [Regular Threshold Voltage (RVT)](/mosfet/parameters/#regular-threshold-voltage-rvt) table. Think about it, you want to build an op-amp with predictable performance. And to achieve that, we have choosen sizes and tabulated performance characteristics for those sizes in order to conduct design of complex circuits.
+The answer to that question remains in our [Regular Threshold Voltage (RVT)](../mosfet/parameters.md#regular-threshold-voltage-rvt) table. Think about it, you want to build an op-amp with predictable performance. And to achieve that, we have choosen sizes and tabulated performance characteristics for those sizes in order to conduct design of complex circuits.
 
 So ***it makes sense to always aim for our (chosen) desired operating point of each and every MOSFET in any circuit.***
 
-We intend to adjust the sizes of the Floating current sources (Class AB Biasing LVT MOSFETs. Known by this term from now on for ease of typing) to ***set the biasing voltages of our output RVT MOSFETs to V~GS~ generated by our bias circuit.*** This was not the case before, because, we generated \(2 * V_{GS}\) for biasing our output MOSFETs (See the discussion on [Sizing Class AB Bias Voltage Generation MOSFET](/references/general-bias/#sizing-class-ab-bias-voltage-generation-mosfet) and [Biasing a Class AB output stage](/references/general-bias/#biasing-a-class-ab-output-stage) to understand what I mean by this) and that gets dropped more on our Floating Current sources. This is exactly why we even opted for increasing width of Floating Current sources.
+We intend to adjust the sizes of the Floating current sources (Class AB Biasing LVT MOSFETs. Known by this term from now on for ease of typing) to ***set the biasing voltages of our output RVT MOSFETs to V~GS~ generated by our bias circuit.*** This was not the case before, because, we generated \(2 * V_{GS}\) for biasing our output MOSFETs (See the discussion on [Sizing Class AB Bias Voltage Generation MOSFET](../references/general-bias.md#sizing-class-ab-bias-voltage-generation-mosfet) and [Biasing a Class AB output stage](../references/general-bias.md#biasing-a-class-ab-output-stage) to understand what I mean by this) and that gets dropped more on our Floating Current sources. This is exactly why we even opted for increasing width of Floating Current sources.
 
 I will put that intent in bullets for you to understand what I mean by this:
 

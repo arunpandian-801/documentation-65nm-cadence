@@ -20,14 +20,14 @@ Before we proceed, let's take a look at the schematic of General-bias circuit.
 **Figure-01:** General bias circuit schematic diagram [Ref. CMOS Circuit Design, Layout and Simulation, Fig 20.47]
 ///
 
-The upper half is the [Beta Multiplier Reference](/references/bmr/) and it's design is already covered seperately in it's own page. The lower half uses BMR to generate wide swing cascode current sink/sources and bias voltages for class-AB output stage.
+The upper half is the [Beta Multiplier Reference](../references/bmr.md) and it's design is already covered seperately in it's own page. The lower half uses BMR to generate wide swing cascode current sink/sources and bias voltages for class-AB output stage.
 
 For designing this, we need to choose values for two things:
 
 - MOSFET Sizes for Cascode bias Voltage generation
 - MOSFET Sizes for class-AB bias voltage generation
 
-Since we have already designed the [BMR](/references/bmr/) for 10 µA, the general bias circuit will also generate bias voltages for 10 µA. For different current, **we have to redesign the BMR** as simply using a different size for a specific current will result in mismatch.
+Since we have already designed the [BMR](../references/bmr.md) for 10 µA, the general bias circuit will also generate bias voltages for 10 µA. For different current, **we have to redesign the BMR** as simply using a different size for a specific current will result in mismatch.
 
 !!! quote
     It is strongly recommended that analog designers use only a small set of “unit-sized” transistors, forming all transistors from parallel combinations of these elementary devices.
@@ -75,7 +75,7 @@ So, when MWS is changed (smaller than 1\/5th of standard size), it will adjust t
 **Figure-03:** Cascode generation MOSFET size auto adjusts V~GS~ of bottom transistors to sink 10 µA.
 ///
 
-It should be noted that our new V~GS~ is not 500 mV as tabulated in [Regular Threshold Voltage](/mosfet/parameters/#regular-threshold-voltage-rvt) table, but is changed to 511.7 mV just as expected. And this is not a problem as we will see later.
+It should be noted that our new V~GS~ is not 500 mV as tabulated in [Regular Threshold Voltage](../mosfet/parameters.md#regular-threshold-voltage-rvt) table, but is changed to 511.7 mV just as expected. And this is not a problem as we will see later.
 
 !!! danger
     This auto adjustment is true as long as the size is small enough. Use a size larger than 1\/5th and the output characteristics may turn worse. Keep it sufficiently small.
@@ -149,7 +149,7 @@ It is good to tabulate the output characteristics of this current source (From t
 
 ## Sizing Class AB Bias Voltage Generation MOSFET
 
-There is no need to size Class AB Bias voltage generation MOSFET and we can just use the standard sizes tabulated in [Regular Threshold Voltage](/mosfet/parameters/#regular-threshold-voltage-rvt) to build [Figure-01](#fig-01).
+There is no need to size Class AB Bias voltage generation MOSFET and we can just use the standard sizes tabulated in [Regular Threshold Voltage](../mosfet/parameters.md#regular-threshold-voltage-rvt) to build [Figure-01](#fig-01).
 
 Atleast that's how it's supposed to be, but there is a **HUGE PROBLEM** in this approach.
 
@@ -167,7 +167,7 @@ Yes, you heard it right, there is insufficient supply voltage for class AB bias 
 
 See the PMOS case in *Figure-08*. Clearly, in order to generate the necessary bias voltage, you need 2 * V~SG~ of PMOS. From [Figure-01](#fig-01), we can quickly say the same for NMOS case as well.
 
-I will repeat V~GS~ and V~SG~ of our standard sizes here from [Regular Threshold Voltage](/mosfet/parameters/#regular-threshold-voltage-rvt) for convenience.
+I will repeat V~GS~ and V~SG~ of our standard sizes here from [Regular Threshold Voltage](../mosfet/parameters.md#regular-threshold-voltage-rvt) for convenience.
 
 | Flavour | V~GSN~ / V~SGP~ |
 |---------|------------|
@@ -199,7 +199,7 @@ Now we have two possible course of actions:
 
 I am going to pick LVT, as the current source built using short channel is already plagued with low R~out~. I don't want to reduce that, when we have another viable option.
 
-LVT MOSFETs are already sized and tabulated in [Low Threshold Voltage](/mosfet/parameters/#low-threshold-voltage-lvt) and for the sake of convenience the sizes are listed here:
+LVT MOSFETs are already sized and tabulated in [Low Threshold Voltage](../mosfet/parameters.md#low-threshold-voltage-lvt) and for the sake of convenience the sizes are listed here:
 
 <a id="table-03"></a>
 
@@ -222,7 +222,7 @@ LVT MOSFETs are already sized and tabulated in [Low Threshold Voltage](/mosfet/p
 
 ### Supply dependance of various bias legs
 
-Now that our sizes are fixed (See [Regular Threshold Voltage](/mosfet/parameters/#regular-threshold-voltage-rvt), [Table-01](#table-01), [Table-03](#table-03)) let's build the General bias circuit and see the supply dependance.
+Now that our sizes are fixed (See [Regular Threshold Voltage](../mosfet/parameters.md#regular-threshold-voltage-rvt), [Table-01](#table-01), [Table-03](#table-03)) let's build the General bias circuit and see the supply dependance.
 
 ![Bias Circuit Full Schematic](./general-bias-assets/23_Bias_Circuit_Full_Schematic_dark.png#only-dark)
 ![Bias Circuit Full Schematic](./general-bias-assets/23_Bias_Circuit_Full_Schematic_light.png#only-light)
@@ -276,7 +276,7 @@ The output MOSFETs have 10 times the width of standard sizes and so are expected
 
 ## Transient Simulation - startup action
 
-The BMR possess startup circuit, and it's design is covered in detail in [Startup Circuit Design](/references/bmr/#startup-circuit-design) section. You may refer to that.
+The BMR possess startup circuit, and it's design is covered in detail in [Startup Circuit Design](../references/bmr.md#startup-circuit-design) section. You may refer to that.
 
 In order to simulate a circuit powering ON, I applied a voltage step to the supply at 10 ns with a rise time of 20 ns to reach VDD (1.2 V) at 30 ns.
 
