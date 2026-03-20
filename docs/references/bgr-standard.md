@@ -146,6 +146,8 @@ So, the observation from here is:
 !!! info "Constraints on Error amplifier output common mode"
     *Our amplifier output common mode should be close to V~DD~.*
 
+<a id="fig-03"></a>
+
 ![NMOS vs PMOS output CM](./bgr-standard-assets/03_NMOS_PMOS_ErrorAmp_dark.svg#only-dark)
 ![NMOS vs PMOS output CM](./bgr-standard-assets/03_NMOS_PMOS_ErrorAmp_light.svg#only-light)
 /// caption
@@ -207,4 +209,164 @@ But, I am going to ***prefer NMOS variant*** for the following reasons:
 
 ### Bias-leg Design
 
-Looking at [Table-02](#table-02), the V~GS~ and V~SG~ of NMOS and PMOS are 740 mV and 690 mV. And the supply is 3.3 V. So, we need to drop 3.3 V in steps of 740 mV or 690 mV based on which MOSFET is used and how many times it is used.
+Looking at [Table-02](#table-02), the V~GS~ and V~SG~ of NMOS and PMOS are 740 mV and 690 mV. And the supply is 3.3 V. *So, we need to achieve a total voltage drop of 3.3 V using multiple V~GS~ or V~SG~ diode-connected drops (either 740 mV or 690 mV), depending on the MOSFET used and how many times it is utilized*.
+
+Let's do the math. We can see that if I used 2 NMOS and 2 PMOS in diode connected configuration as my bias leg, that adds up to:
+
+<a id="eqn-02"></a>
+
+\[\tag{2} V_{SUP,min} = 2 * V_{GS,n} + 2 * V_{SG,p} = 2 * (740m + 690m) = 2.86 V\]
+
+That's almost amounts to supply of 3.3 V and clearly cannot accomodate anymore V~GS~ drops in it. The DC annotated schematic of such a bias leg is shown in *Figure-06*.
+
+<a id="fig-06"></a>
+
+![four Diode MOS Bias leg](./bgr-standard-assets/06_01_BiasLeg_4DiodeMOS_dark.png#only-dark)
+![four Diode MOS Bias leg](./bgr-standard-assets/06_01_BiasLeg_4DiodeMOS_light.png#only-light)
+/// caption
+**Figure-06:** Two NMOS and two PMOS diode connected bias leg
+///
+
+Clearly, the increase in reference current is due to the excess supply voltage left from what we computed in [Equation-02](#eqn-02). We computed a minimum supply of 2.86 V and that leaves \(V_{excess} = V_{DD} - V_{DD,min} = 3.3 - 2.86 = 0.44 V\) which is distributed to all MOSFETs which results in increase of current.
+
+#### Decreasing Minimum supply
+
+We don't need to constrain ourselves to 2.86 V as that is the minimum supply needed for 10 µA. **This is an error-amp, and we don't care about it's small signal parameter variation with bias current.**
+
+The supply can go even lower than 2.86 V by generating a current lesser than 10 µA. But, there is an absolute limit dictated by the threshold voltage, beneath which you will reach the subthreshold region. That's a no go. **Biasing in the subthreshold will introduce horrible threshold mismatch, which will manifest as off-set at the input. We don't want that either.**
+
+With this in mind, let's compute the minimum supply which is barely enough to keep all MOSFETs ON. Looking at [I/O Device — 500 nm](../mosfet/parameters.md#io-device-500-nm) table, we see that the threshold voltage of NMOS and PMOS are 560 mV and 510 mV.
+
+<a id="eqn-03"></a>
+
+\[\tag{3} V_{DD,min} = 2 * V_{TH,N} + 2 * V_{TH,P} = 2 * 0.56 + 2 * 0.51 = 2.14 V\]
+
+!!! warning
+    This is an overestimate. Looking at [Figure-06](#fig-06), both middle MOSFETs are suffering from body effect and their increase in threshold voltage is not accounted in *Equation-03*. It means, that the minimum limit will be slightly higher than 2.14 V.
+
+We will see later that the actual limit is 2.63 V (See *Figure-07* for DC annotated schematic at 2.63 V supply and [Figure-09](#fig-09) for finding this limit) from simulations. But that is just 0.7 V below supply. Not even half the supply.
+
+![four diode MOS minimum Supply bias](./bgr-standard-assets/06_03_BiasLeg_4DiodeMOS_VSUPmin_2600m_dark.png#only-dark)
+![four diode MOS minimum Supply bias](./bgr-standard-assets/06_03_BiasLeg_4DiodeMOS_VSUPmin_2600m_light.png#only-light)
+/// caption
+**Figure-07:** Four diode connected MOSFET at minimum possible supply
+///
+
+Notice that in *Figure-07*, both the middle MOSFETs are in sub-threshold (***Region=3***).
+
+Now, we have two options:
+
+- Accept 2.63 V as the minimum supply for error-amp and thus the reference.
+- Decrease it even further by removing a V~GS~ drop.
+
+Let's explore the second option, because I like to aim for a minimum supply close to V~DD~\/2.
+
+#### Removing 1 V~GS~ drop
+
+If we removed a V~GS~ (or 1 diode connected MOSFET) drop from [Equation-02](#eqn-02), we can go even lower than 2.63 V limit dictated by threshold voltage.
+
+We can remove middle PMOS or middle NMOS, but, I am going to remove middle PMOS as the middle NMOS can be used as a cascode bias reference for current sink used in Diff-amp (Follow along, you will see this shortly).
+
+\[\tag{4} V_{DD,min} = 2 * V_{TH,N} + V_{TH,P} = 2 * 0.56 + 0.51 = 1.63 V\]
+
+Atleast now we can theoretically expect a minimum supply close to V~DD~/2.
+
+<a id="fig-08"></a>
+
+![Three diode MOS bias leg](./bgr-standard-assets/06_02_BiasLeg_3DiodeMOS_dark.png#only-dark)
+![Three diode MOS bias leg](./bgr-standard-assets/06_02_BiasLeg_3DiodeMOS_light.png#only-light)
+/// caption
+**Figure-08:** Two NMOS and one PMOS diode connected bias leg
+///
+
+The construction of such a bias leg is shown is *Figure-08*. The bias current generated is 31.5 µA for supply of 3.3 V.
+
+!!! note
+    Notice that the length of bottom transistor is increased to four times by keeping four NMOS in series, and middle one is increased to two times similarly.
+
+    This is made to reduce the bias current generated. Had I used just the minimum length, the bias current would have increased, considering now it needs to split 3.3 V between just 3 MOSFETs.
+
+??? note
+    I did this roundabout way, because I got lazy in picking another size with longer length. Keeping MOSFETs in series to increase length is perfectly valid. [*Ref. CMOS Circuit Design, Layout and Simulation, Fig 20.35*]
+
+#### Bias Leg Performance across supply
+
+Sweeping the supply for [Figure-06](#fig-06) and [Figure-08](#fig-08) bias leg configurations over 2.5 V to 3.3 V yields *Figure-09*.
+
+<a id="fig-09"></a>
+
+![Supply dependance of Bias Leg](./bgr-standard-assets/07_ID_Vs_VSUP_BiasLeg_dark.svg#only-dark)
+![Supply dependance of Bias Leg](./bgr-standard-assets/07_ID_Vs_VSUP_BiasLeg_light.svg#only-light)
+/// caption
+**Figure-09:** Performance of Bias Leg of [Figure-06](#fig-06) and [Figure-08](#fig-08) over supply
+///
+
+Clearly, [four diode connected bias leg](#fig-06) touches nA range (1 µA is the border to nA range) at 2.63 V while the [three diode connected bias leg](#fig-08) is still in µA range, i.e., all MOSFETs are still ON.
+
+#### Current Sink from final bias leg (three diode connected)
+
+![Cascode Current Sink TB](./bgr-standard-assets/08_01_Simple_vs_Cascode_TB_dark.png#only-dark)
+![Cascode Current Sink TB](./bgr-standard-assets/08_01_Simple_vs_Cascode_TB_light.png#only-light)
+/// caption
+**Figure-10:** Cascode Current Sink biased by bias Leg of [Figure-08](#fig-08) Test bench
+///
+
+The performance of current sink (both simple and cascoded) seen *Figure-11* shows that ***both cascode and simple current sink needs the same minimum voltage of 0.6 V***.
+
+![Current Sink Performance](./bgr-standard-assets/08_02_Simple_vs_Cascode_Results_dark.svg#only-dark)
+![Current Sink Performance](./bgr-standard-assets/08_02_Simple_vs_Cascode_Results_light.svg#only-light)
+/// caption
+**Figure-11:** Simple and Cascoded Current sink performance
+///
+
+!!! success ""
+    With that being the case, there is absolutely no reason to avoid cascoded current sink.
+
+### Error Amp ICMR
+
+Now we just need to see whether 0.777 V is in ICMR of our level shifted NMOS Diff-amp. *Figure-12* shows the full schematic of error amp in ICMR measurement configuration and *Figure-13* shows the simplified schematic of ICMR testbench.
+
+<a id="fig-12"></a>
+
+![Error Amp Schematic](./bgr-standard-assets/10_NMOS_LevelShifter_DiffAmp_dark.png#only-dark)
+![Error Amp Schematic](./bgr-standard-assets/10_NMOS_LevelShifter_DiffAmp_light.png#only-light)
+/// caption
+**Figure-12:** Schematic diagram of Error Amplifier
+///
+
+![ICMR TB simplified](./bgr-standard-assets/11_ICMR_TB_dark.svg#only-dark)
+![ICMR TB simplified](./bgr-standard-assets/11_ICMR_TB_light.svg#only-light)
+/// caption
+**Figure-13:** Simplified schematic of ICMR Test bench
+///
+
+In order to justify the need of a level shifter, I have included the results of ICMR measurements for a simple NMOS diff-amp of [Figure-03](#fig-03) (only the NMOS Input case) in *Figure-14(a)*.
+
+![ICMR Results - 1](./bgr-standard-assets/12_01_ICMR_Results_withWithout_LevelShifter_dark.svg#only-dark)
+![ICMR Results - 1](./bgr-standard-assets/12_01_ICMR_Results_withWithout_LevelShifter_light.svg#only-light)
+
+![ICMR Results - 2](./bgr-standard-assets/12_02_ICMR_Vsup_2500mV_dark.svg#only-dark)
+![ICMR Results - 2](./bgr-standard-assets/12_02_ICMR_Vsup_2500mV_light.svg#only-light)
+/// caption
+**Figure-14:** ICMR measurements for: (a) NMOS Diff-amp without level shifted inputs, (b) With level shifted inputs and \(c) level shifted input variant at a supply of 2.5 V
+///
+
+Some observations on *Figure-14*:
+
+1. Simple NMOS Diff-amp without level shifter has an ICMR of 1.6 V to 3.3 V (*Figure-14(a)*). **Clearly doesn't include 0.777 V in it.**
+2. The level shifted variant has an ICMR of 0 V to 2.72 V. The upper limit is due to level shifter as it needs the gate voltage sufficiently lower to keep the level shifting PMOS ON (*Figure-14(b)*).
+3. *Figure-14\(c)* shows ICMR at a supply of 2.5 V (< 3.3 V). The ICMR is 0 V to 2.0 V roughly. Again limited by level shifter.
+
+!!! success
+    The level shifted variant includes 0.777 V in it's ICMR.
+
+To summarize:
+
+| V~DD~ | ICMR |
+|-------|------|
+| 3.3 V | 0 V to 2.7 V |
+| 2.5 V | 0 V to 2.0 V |
+/// caption
+**Table-03:** ICMR summary for two cases of supply for Error-amp of [Figure-12](#fig-12)
+///
+
