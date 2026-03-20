@@ -68,7 +68,7 @@ The PNP BJTs are vertical parasitic components that can be used to generate a V~
 
 For designing this, we need to find:
 
-- Sizes for PMOS.
+- a Size for current sourcing PMOS.
 - Value of PTAT Current generator resistor, R~1~.
 - Error amplifier topology plus sizes for MOSFETs used to build it.
 - Value of PTAT voltage source resistor, R~2~.
@@ -171,7 +171,7 @@ Clearly 0.777 V is close to GND (0 V) than V~DD~ (3.3 V). And so,
 
 So to sense a common mode voltage near to GND, this time we could incline towards a PMOS.
 
-But that *contradicts with our output common constraint*.
+But that *contradicts with our output common mode constraint*.
 
 ### Possible modifications to Diff-amp
 
@@ -181,3 +181,30 @@ So the simplest modification we can do is to ***add level shifters.*** That is:
 
 - Shift the input of NMOS input diff-amp upwards towards it's ICMR.
 - Shift the output of PMOS input diff-amp upwards towards V~DD~.
+
+![Diff amps with level shifters](./bgr-standard-assets/05_LevelShifterPossbilities_dark.svg#only-dark)
+![Diff amps with level shifters](./bgr-standard-assets/05_LevelShifterPossbilities_light.svg#only-light)
+/// caption
+**Figure-05:** Diff-amps with appropriate level shifters
+///
+
+*Figure-05* shows both possibilities. Both can be used as the feedback action will adjust the node voltages to settle to a steady state.
+
+But, I am going to ***prefer NMOS variant*** for the following reasons:
+
+1. NMOS Diff-amp produces \(V_{DD} - V_{SG}\) voltage by default with just common mode input. Very useful to directly bias the current source PMOS. 
+
+    ??? question "What happens with a PMOS input Diff-amp?"
+        Had we used PMOS Diff-amp, there is a chance for some off-set to develop between the regulated nodes to push the output up to attain steady state. Think about it, Diff-amp operates using \(V_{out} = A_{D} * (V_{+} - V_{-})\). So to shift output upwards, you need to develop a non-zero difference between PLUS and MINUS terminals.
+
+        Afterall, we can't set the output of this variant very close to a value unlike the NMOS input case.
+
+2. Load of NMOS Diff-amp itself being a PMOS helps to improve matching with the current source PMOS.
+3. Output is a high impedance, and can be easily compensated, by making it the dominant pole.
+
+    ??? question "What to do with PMOS input Diff-amp?"
+        You compensate by making the output of Diff-amp the dominant pole, and not the level shifted output. Level shifter presents low impedance at the output and would require large capacitors to compensate. Meanwhile, NMOS output itself is high-impedance node, and it is attached to gate terminals of Current source PMOS which is also high impedance and themselves presents some load, making it easy to compensate.
+
+### Bias-leg Design
+
+Looking at [Table-02](#table-02), the V~GS~ and V~SG~ of NMOS and PMOS are 740 mV and 690 mV. And the supply is 3.3 V. So, we need to drop 3.3 V in steps of 740 mV or 690 mV based on which MOSFET is used and how many times it is used.

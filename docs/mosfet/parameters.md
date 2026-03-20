@@ -85,7 +85,7 @@ Unless mentioned explicitily, all circuits reference back to this page for trans
 | I~D~ | 10 µA | 10 µA | Approximate, depends on operating point |
 | W/L (Drawn) | 5.8 / 1 | 13.8 / 1 | Selected based on I~D~ and V~ov~ |
 | W/L (Actual) | 2.9 µm / 500 nm | 6.9 µm / 500 nm | Absolute dimensions |
-| V~DSsat~ | 350 mV | 200 mV | From R~out~ vs V~DS~ curve |
+| V~DSsat~ | 250 mV | 200 mV | From R~out~ vs V~DS~ curve |
 | V~TH~ | 560 mV | 510 mV | From g~m~ curve of a 20/1 device (V~DS~ = 180 mV) |
 | V~GS~ | 740 mV | 690 mV | With no body effect |
 
