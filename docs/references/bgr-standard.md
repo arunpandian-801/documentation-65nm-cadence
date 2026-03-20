@@ -29,7 +29,7 @@ Before we proceed, let's take a look at the schematic of BGR.
 ![Series BGR Schematic Diagram](./bgr-standard-assets/01_Schemtic_Series_BGR_dark.svg#only-dark)
 ![Series BGR Schematic Diagram](./bgr-standard-assets/01_Schemtic_Series_BGR_light.svg#only-light)
 /// caption
-**Figure-01:** Series BGR Schematic Diagram
+**Figure-01:** Series BGR Schematic Diagram (Startup not shown)
 ///
 
 The PNP BJTs are vertical parasitic components that can be used to generate a V~BE~ voltage (CTAT) in a CMOS process. One such diode is characterized in [PNP 20 X 20](../mosfet/BJT-parameters.md#pnp-20-x-20). The parameters listed there are what we will use to design the BGR, and as such, some necessary parameters for our design are summarised in *Table-01:*
@@ -41,7 +41,7 @@ The PNP BJTs are vertical parasitic components that can be used to generate a V~
 | η | 1003.6 m | Forward current emission coefficient (Emitter-Base junction) |
 | I~S~ | 0.285 aA | Saturation Current |
 | V~BE~ | 0.777 V | 1 Diode (At a current of 5 µA) |
-| \(dV_{D}/dT\) | -1.75 mV/°C | Change in the diode’s voltage with temperature (at current of 5 µA) for 8 Diodes in parallel |
+| \(\delta V_{D}/\delta T\) | -1.75 mV/°C | Change in the diode’s voltage with temperature (at current of 5 µA) for 8 Diodes in parallel |
 /// caption
 **Table-01:** PNP Diode summary
 ///
@@ -370,3 +370,65 @@ To summarize:
 **Table-03:** ICMR summary for two cases of supply for Error-amp of [Figure-12](#fig-12)
 ///
 
+## Startup circuit design
+
+Since the reasoning behind creating the startup circuit is thoroughly explained in the [Startup Circuit Design](../references/bmr.md#startup-circuit-design) section of [BMR](../references/bmr.md), I won't waste time and space to repeat it here. 
+
+![Startup circuit schematic](./bgr-standard-assets/13_StartupCircuit_dark.png#only-dark)
+![Startup circuit schematic](./bgr-standard-assets/13_StartupCircuit_light.png#only-light)
+/// caption
+**Figure-15:** Startup circuit schematic
+///
+
+However, I will provide commentary on *Figure-15* to explain some choices in brief:
+
+1. V~bias~ node is the Gate of Current sourcing PMOS (also the output node of error-amp). When the BGR has started up, the PMOS is biased to give 5 µA (See *Figure- ---*). V~bias~ receives appropriate voltage to set this current due to feedback loop.
+2. When BGR has started up, you want to shut your leaker PMOS, and so, you need to pull it's Gate (or output of startup circuit) towards V~DD~. This is achieved by keeping three `1/3` sized diode connected NMOS, which cannot sink 5 µA and hence push the output to supply.
+
+    ??? note
+        Keeping three diode connected NMOS in pull down shouldn't surprise you. Recall the discussion in [Bias-leg Design](../references/bgr-standard.md#bias-leg-design), where we saw that many diode connected V~GS~ drops are needed to completely drop the supply of 3.3 V. That value for supply is huge, compared to what we get in core devices (L~min~ = 65 nm, V~DD~ = 1.2 V).
+
+        So, ***it is very common to keep multiple diode connected MOSFETs in series especially in Long Channel design (or higher supply voltage designs).***
+
+        I would even say it is the recommended way to do this, than keeping 1 ridiculously long MOSFET to completely drop the supply to Ground.
+
+3. The leaker PMOS is taken `1/1` because just by this ratio, it gave about 70 µA (See *Figure-16, Right half*), more than enough to pull the voltage of regulated node up to start the circuit.
+
+![Leaker MOS Design TB](./bgr-standard-assets/19_DCAnnotated_LeakerPMOS_dark.png#only-dark)
+![Leaker MOS Design TB](./bgr-standard-assets/19_DCAnnotated_LeakerPMOS_light.png#only-light)
+/// caption
+**Figure-16:** Current leaked by a 1/1 PMOS
+///
+
+See the discussion on [Leaker NMOS Testbench](../references/bmr.md#leaker-nmos-testbench) for more information regarding the testbench seen in *Figure-16*.
+
+## Fixing PTAT Voltage Source resistor, R~2~
+
+The resistor value for R~2~ is fixed by aiming for ZTC (Zero Temperature Co-efficient) operating point for output. 
+
+The output is made up of:
+
+- CTAT Voltage source by bottom PNP Diode (8 in parallel).
+- PTAT Voltage source by resistor R~2~.
+
+Looking at [Figure-01](#fig-01), we can write,
+
+\[V_{OUT} = V_{Q_3} + V_{R_2}\]
+
+\[V_{OUT} = V_{Q_{3}} + L * \eta * V_T * \ln K\]
+
+where, \(L = R_2/R_1\) and \(V_T\) is the thermal voltage.
+
+Differentiating with respect to temperature and equating to zero (to find ZTC point) yields,
+
+\[\frac{\delta V_{OUT}}{\delta T} = \frac{\delta V_{Q_3}}{\delta T} + L * \eta * \ln K * \frac{\delta V_{T}}{\delta T} = 0\]
+
+Looking at [Table-01](#table-01), we get \(\delta V_{Q_3}/\delta T = -1.75~mV/C\), \(~\eta = 1003.6m~\) and \(~K = 8\). We also know \(\delta V_{T}/\delta T = 0.085~mV/C\). Plugging these values in above equation yields,
+
+\[-1.75m + L * 1003.6m * \ln 8 * 0.085m = 0\]
+
+\[L = 9.865\]
+
+From L and R~1~, we get,
+
+\[R_2 = L * R_1 = 9.865 * 10.9k \approx 107.5k\]

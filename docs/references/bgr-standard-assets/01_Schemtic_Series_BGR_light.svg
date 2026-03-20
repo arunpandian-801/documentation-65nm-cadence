@@ -352,10 +352,48 @@
 </g><g
          transform="scale(10)"
          id="g232"><text
-           id="text236"
+           id="text238"
            style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,231.445,62.5)"><tspan
              id="tspan234"
              y="0"
-             x="0 114">88</tspan></text>
+             x="0 114">88</tspan><tspan
+             id="tspan236"
+             y="-36"
+             x="-228.01401">Q</tspan></text>
+<text
+           id="text242"
+           style="font-variant:normal;font-weight:normal;font-size:10.05000019px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,15.1009,95.18359)"><tspan
+             id="tspan240"
+             y="0"
+             x="0">1</tspan></text>
+<text
+           id="text246"
+           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,183.4309,98.5)"><tspan
+             id="tspan244"
+             y="0"
+             x="0">Q</tspan></text>
+<text
+           id="text250"
+           style="font-variant:normal;font-weight:normal;font-size:10.05000019px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,195.1008,95.18359)"><tspan
+             id="tspan248"
+             y="0"
+             x="0">2</tspan></text>
+<text
+           id="text254"
+           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,303.4308,98.5)"><tspan
+             id="tspan252"
+             y="0"
+             x="0">Q</tspan></text>
+<text
+           id="text258"
+           style="font-variant:normal;font-weight:normal;font-size:10.05000019px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,315.1007,95.18359)"><tspan
+             id="tspan256"
+             y="0"
+             x="0">3</tspan></text>
 </g></g></g></svg>
