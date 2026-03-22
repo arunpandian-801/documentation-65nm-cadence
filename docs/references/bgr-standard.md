@@ -1,5 +1,5 @@
 ---
-description: Conventional Bandgap Reference design procedure — series CTAT and PTAT voltage summation topology, 1.22V silicon bandgap output, 14.204 ppm/°C temperature coefficient, on I/O 500nm MOSFET, simulated on Cadence Virtuoso and Spectre.
+description: Conventional Bandgap Reference design procedure — series CTAT and PTAT voltage summation topology, 1.22V silicon bandgap output, 19.416 ppm/°C temperature coefficient, on I/O 500nm MOSFET, simulated on Cadence Virtuoso and Spectre.
 ---
 
 --8<-- "includes/disclaimer.md"
@@ -8,12 +8,11 @@ description: Conventional Bandgap Reference design procedure — series CTAT and
 
 ## Prerequisites
 
-This design shares methodology with the 
-[Beta Multiplier Reference (BMR)](../references/bmr.md).
-The following sections are directly applicable here and are not repeated:
+This design shares methodology with the [Beta Multiplier Reference (BMR)](../references/bmr.md). The following sections are directly applicable here and are not repeated:
 
 - [Fixing Resistor Value](../references/bmr.md#fixing-resistor-value) — procedure to find resistor value using the substitution theorem
-- [Startup Circuit Design](../references/bmr.md#startup-circuit-design) — considerations and procedure for desiging startup circuit
+- [Startup Circuit Design](../references/bmr.md#startup-circuit-design) — design considerations and procedure are identical
+  to the BMR.
 - [Using MOSFET as a capacitor to compensate the feedback loop](../references/bmr.md#using-mosfet-as-a-capacitor-to-compensate-the-feedback-loop) — NMOS capacitor vs PMOS capacitor and it's effects on startup
 
 Read those sections before proceeding.
@@ -491,7 +490,7 @@ And the output voltage vs temperature can be seen in *Figure-18.*
 
 Clearly, the output is showing PTAT nature instead of the characteristic bow. 
 
-Even though the output is more or less constant, i.e., around \(1.2695~V \pm 5~mV\), the temperature performance is still not that good: **104.62 ppm/°C**
+Even though the output is more or less constant, i.e., around \(1.2695~V \pm 5~mV\), the temperature co-efficient is still not that good: **104.62 ppm/°C**
 
 Let's iterate.
 
@@ -535,6 +534,11 @@ In this design, increasing had no effect and I adapted and started decreasing. F
 **Figure-21:** BGR output performance across temperature for reducing R~2~ from 107.5 kΩ ([Table-04](#table-04) value) to 80 kΩ
 ///
 
+!!! success ""
+    From [Figure-19](#fig-19) and *Figure-21*, we see that our correct value of R~2~ to attain characteristic bow lies within 80 kΩ and 107.5 kΩ. That is:
+
+    \[80 ~k\Omega < R_2 < 107.5 ~k\Omega\]
+
 !!! warning "CAUTION - Sometimes the characteristic bow can be inverted"
     Below, I have included an ***inverted bow*** which I got while designing the parallel realized BGR.
 
@@ -577,7 +581,7 @@ Changing R~2~ in [Figure-18](#fig-18) with the value in *Table-05* (99 kΩ) yiel
 
 Temperature performance seen in *Figure-23* is leagues above what we saw in [Figure-19](#fig-19) or [Figure-21](#fig-21).
 
-The output is about \(1.2227 \pm 475 \mu V\) with a temperature performance of **19.416 ppm/°C**.
+The output is about \(1.2227 \pm 475 \mu V\) with a temperature co-efficient of **19.416 ppm/°C**.
 
 Now that we got the characteristic bow, let's also see the supply dependance.
 
