@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: C:/Documents/Basic Projects/Cadence/Libraries/DOCUMENTATION/docs/references/bgr-low-voltage-assets/15_Supply_Noise_Coupling_light
 %%Creator: XCircuit v3.4 rev10
-%%CreationDate: Fri Mar 27 14:59:20 2026
+%%CreationDate: Fri Mar 27 17:09:52 2026
 %%Pages: 1
-%%BoundingBox: 68 68 478 370
+%%BoundingBox: 68 68 694 370
 %%DocumentNeededResources: font Helvetica font Helvetica-Bold font Times-Roman 
 %%EndComments
 %%BeginProlog
@@ -236,6 +236,20 @@ begingate
 endgate
 } def
 
+/resistor {
+begingate
+1 1.00 0 64 0 36 2 polygon
+1 1.00 0 -64 0 -36 2 polygon
+1 1.00 0 -36 14 -30 -14 -18 14 -6 -14 6 14 18 -14 30 0 36 8 polygon
+1.000 0.000 0.000 scb
+(r.1) {/Times-Roman cf} 2 9 0 1.00 0 64 pinlabel
+(r.2) {/Times-Roman cf} 2 13 0 1.00 0 -64 pinlabel
+0.180 0.545 0.341 scb
+(spice:R%i %pr.1 %pr.2 1.0K) {/Times-Roman cf} 2 0 0 1.00 -208 -160 infolabel
+(sim:r %pr.1 %pr.2) {/Times-Roman cf} 2 0 0 1.00 -208 -208 infolabel
+endgate
+} def
+
 
 %%EndSetup
 
@@ -264,21 +278,15 @@ endgate
 1.00 0 -1072 64 dot
 1.00 0 -704 160 pmos
 1.00 0 -704 224 vdd
-1 1.00 -704 96 -704 48 2 polygon
 1 1.00 -768 160 -816 160 2 polygon
 1 1.00 -816 160 -832 160 -832 -128 -1072 -128 4 polygon
 1.00 0 -1072 -128 dot
 1.00 0 -704 -288 nmos
 1 1.00 -768 -288 -816 -288 2 polygon
-1 1.00 -704 48 -704 -224 2 polygon
-1 1.00 -912 -64 -704 -64 2 polygon
-1.00 0 -704 -64 dot
 (c) {ss} (C) {/Helvetica cf} 4 16 0 1.00 -992 -16 label
-1 1.00 -704 -64 -320 -64 -320 160 3 polygon
 1.00 0 -320 160 dot
 1.00 0 -704 -352 gnd
 1.000 0.000 0.000 scb
-1 1.10 -1056 240 -1056 96 -864 96 -864 -48 -352 -48 -352 112 6 polygon
 1 1.10 -368 96 -352 112 -336 96 3 polygon
 1 1.10 -1104 304 -1088 320 -1088 304 -1072 320 -1072 304 -1056 320 -1056 304 
 -1040 320 -1040 304 -1024 320 -1024 304 11 polygon
@@ -293,6 +301,45 @@ endgate
 (GENERATOR) {/Helvetica-Bold cf} 2 16 0 1.00 -448 -368 label
 0.000 0.000 1.000 scb
 (BIASP) {ss} (V) {/Helvetica-Bold cf} 4 16 0 1.00 -384 224 label
+sce
+1.00 0 -704 -16 pmos
+1 1.00 -704 48 -704 96 2 polygon
+1 1.00 -704 -80 -704 -224 2 polygon
+1 1.00 -768 -16 -832 -16 2 polygon
+1 1.00 -912 -64 -912 -160 -704 -160 3 polygon
+1.00 0 -704 -160 dot
+1.00 0 -832 -16 dot
+1.00 0 96 160 pmos
+1.00 0 96 224 vdd
+1 1.00 -256 160 32 160 2 polygon
+1.00 0 96 -240 resistor
+1.00 0 96 -352 gnd
+1 1.00 96 -352 96 -288 2 polygon
+1 1.00 96 -176 96 96 2 polygon
+(N*R) {/Helvetica cf} 2 16 0 1.00 128 -256 label
+1.00 90 352 -192 nmos
+1 1.00 288 -192 288 -256 416 -256 416 -192 4 polygon
+1.00 0 352 -352 gnd
+1 1.00 352 -352 352 -256 2 polygon
+1 1.00 352 -128 352 -64 96 -64 3 polygon
+1.00 0 96 -64 dot
+1.00 0 352 -256 dot
+1.000 0.000 0.000 scb
+1 1.10 128 -48 144 -32 144 -48 160 -32 160 -48 176 -32 176 -48 192 -32 192 -48 
+208 -32 208 -48 11 polygon
+0.000 0.000 1.000 scb
+(BGR) {ss} (V) {/Helvetica-Bold cf} 4 16 0 1.00 128 0 label
+sce
+2 1.00 -16 352 -16 -432 448 -432 448 352 4 polygon
+0.000 0.000 0.000 scb
+(OUTPUT) {/Helvetica-Bold cf} 2 16 0 1.00 208 224 label
+(BRANCH) {/Helvetica-Bold cf} 2 16 0 1.00 208 176 label
+sce
+1 1.00 -704 -160 -320 -160 -320 160 3 polygon
+1.000 0.000 0.000 scb
+1 1.10 -1040 240 -1040 96 -864 96 -864 -144 -352 -144 -352 112 6 polygon
+1 1.10 -272 176 16 176 16 96 16 -64 64 -64 5 polygon
+1 1.10 48 -80 64 -64 48 -48 3 polygon
 pgsave restore showpage
 
 %%Trailer

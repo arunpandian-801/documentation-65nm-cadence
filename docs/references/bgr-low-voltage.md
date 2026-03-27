@@ -703,6 +703,8 @@ Notice the NMOS capacitor at the output. It is really important to add one to ke
 
 And *Figure-29* shows the transient simulation results.
 
+<a id="fig-29"></a>
+
 ![BGR Startup action](./bgr-low-voltage-assets/05_03_StartupAction_NOCAP_dark.svg#only-dark)
 ![BGR Startup action](./bgr-low-voltage-assets/05_03_StartupAction_NOCAP_light.svg#only-light)
 /// caption
@@ -725,3 +727,45 @@ Looking back at [Figure-02](#fig-02), we see that the compensation capacitor is 
 **Figure-30:** Supply noise coupling path to output of error amp
 ///
 
+When the supply turn ON in [Figure-29](#fig-29), the sudden ramp induces noise on the output error-amp through C~c~, and once the supply becomes stable, we don't see anymore ripples in any of the outputs. In fact, the ripples die down and the voltages become stable as the feedback loop is stable as seen in [Figure-26](#fig-26).
+
+Obviously we don't want this. But, what's even more strange is the fact *there is a slight ripple on the final output of BGR (VBGR)* as seen [Figure-29](#fig-29) around the 50 ns mark. There is an NMOS loading that node, which is supposed to act as a capacitor. And yet, we do see the ripple. **This doesn't make any sense, even in *Figure-30.***
+
+### Why the small ripple on output of BGR even with capacitor load?
+
+NMOS acts as a capacitor, only when it is strongly inverted. Looking at [Core device MOSFET as a capacitor](../mosfet/parameters.md#core-device-65-nm_2) table, we see that for an NMOS to behave as a capacitor, it ***needs a gate voltage larger than 0.6 V***.
+
+That table is repeated here in *Table-12* for convenience.
+
+| Flavour | Drawn Size | Actual Size | V~G~ | Nominal Capacitance |
+|---------|------------|-------------|------|---------------------|
+| NMOS-RVT | 20 / 20 | 1.3 µm / 1.3 µm | > 0.6 V | 20.9 fF |
+/// caption
+**Table-12:** MOSFET capacitance for specific size and Voltage conditions
+///
+
+And clearly from [Figure-29](#fig-29), the instant where we see a ripple, around the 50 ns mark, ***the output is near 150 mV, which is clearly less than the required voltage (0.6 V) for proper operation***.
+
+In order to solidify this statement, see the CV curve for an NMOS of `20/20` size shown in *Figure-31*.
+
+![NMOS CV Curve - 20/20](./bgr-low-voltage-assets/16_CV_Curve_NMOS_20by20_dark.svg#only-dark)
+![NMOS CV Curve - 20/20](./bgr-low-voltage-assets/16_CV_Curve_NMOS_20by20_light.svg#only-light)
+/// caption
+**Figure-31:** NMOS CV Curve for 20/20 size. (Curve title is wrong as I generated this for both 10/10 and 20/20 at the same time.)
+///
+
+Clearly an operating voltage of 0.15 V is nowhere enough to make the NMOS behave as a capacitor with a nominal value of 20.9 fF. Instead it has just about 5 fF (From *Figure-31*), almost four times lesser than it's nominal value.
+
+And due to this, the ripple easily passes through to the output of BGR.
+
+But once it has settled to it's steady state value (about 0.6 V), then it no longer can affect the output.
+
+### PSRR+ measurements
+
+Since we already know that the culprit is the supply noise, let's quantify the amount by which it gets rejected (or the amount that makes it through) using PSRR+ (Power Supply Rejection Ratio for positive supply rail).
+
+![PSRR of BGR](./bgr-low-voltage-assets/07_03_BGR_PSRR_NOCAP_dark.svg#only-dark)
+![PSRR of BGR](./bgr-low-voltage-assets/07_03_BGR_PSRR_NOCAP_light.svg#only-light)
+/// caption
+**Figure-32:** PSRR+ response for both output of error-amp (PSRR_VBIASP) and BGR (PSRR_BGR)
+///
