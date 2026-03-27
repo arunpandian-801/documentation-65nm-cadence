@@ -159,7 +159,7 @@ The error amplifier for the design of parallel BGR is a simple two stage op-amp 
 
 Still, here's a short explanation for why we chose this topology for our error amplifier:
 
-1. *NMOS input stage is used to accomodate common mode voltage of 0.777 V*.
+1. *NMOS input stage is used to accommodate common mode voltage of 0.777 V*.
 
     Common mode voltage which appears at the input of error amplifier is 0.777 V (See V~BE~ in [Table-01](#table-01)) as stated in [Prerequisites](#prerequisites) and also in [Input common mode constraint section of series BGR](../references/bgr-standard.md#inherent-constraint-on-input-common-mode-of-nmos-and-pmos-diff-amp).
 
@@ -279,7 +279,8 @@ There are two distinct designs that explain the logic behind the creation of sta
 
 Therefore, trying to explain this logic again is a waste of time and space. And so, I am just going to show you the schematic of Startup Circuit (See *Figure-08*) that accompanies the Parallel BGR and move on to other sections.
 
-![Startup circuit schematic]()
+![Startup circuit schematic](./bgr-low-voltage-assets/05_01_StartupCkt_schematic_dark.png#only-dark)
+![Startup circuit schematic](./bgr-low-voltage-assets/05_01_StartupCkt_schematic_light.png#only-light)
 /// caption
 **Figure-08:** Startup circuit schematic
 ///
@@ -342,7 +343,8 @@ Now that we know the values for resistors, let's first simulate this and see the
 
 The schematic diagram with the values in *Table-05* is shown in *Figure-11*.
 
-![BGR Schematic - 1]()
+![BGR Schematic - 1](./bgr-low-voltage-assets/12_BGR_Schematic_Iteration_01_dark.png#only-dark)
+![BGR Schematic - 1](./bgr-low-voltage-assets/12_BGR_Schematic_Iteration_01_light.png#only-light)
 /// caption
 **Figure-11:** Parallel BGR schematic for iteration 1. Resistor values from Table-05
 ///
@@ -586,4 +588,140 @@ The final result seems satisfactory. The obtained output voltage is \(598.8 ~mV 
     ***Do not attempt for precise value of 0.6 V or even better temperature characteristics*** by fine tuning the value of resistors. It is a futile thing to do considering process variations and worse tolerance of IC resistors. They cannot be fabricated with precise values and will need trimming. 
     
     When we say the output is 0.6 V, it is nominally 0.6 V and it could vary slightly. Run a monte carlo analysis to test this statement. ***This precise design methodology is just an illusion spread among the community and do not fall for it!***
+
+Now that we got the characteristic bow, let's also see the supply dependance.
+
+### Supply Dependance
+
+Sweeping the supply from GND to VDD (1.2 V), yields *Figure-23*.
+
+![BGR output supply Performance](./bgr-low-voltage-assets/04_SupplyDependance_dark.svg#only-dark)
+![BGR output supply Performance](./bgr-low-voltage-assets/04_SupplyDependance_light.svg#only-light)
+/// caption
+**Figure-23:** BGR output vs Supply
+///
+
+Unlike the [Supply dependance of series BGR](../references/bgr-standard.md#supply-dependance), our parallel BGR shows only **0.15 V of margin** for supply variations (from 1.05 V to 1.2 V). Any lower than that results in huge errors from our expected output.
+
+The sudden rise in output around 0.7 V is also easily explained remembering that our PNP Diodes generate a V~BE~ of 0.777 V [See [Table-01](#table-01)] and our supply is slowly becoming high enough to accommodate this voltage. Once it is sufficiently away from that value (around 0.9 V), our output starts to settle towards it's expected value.
+
+Gaining anymore margin than the one we got (about 0.15 V) is extremely hard considering the fact that a huge portion of supply is eaten up by the V~BE~ generated (0.777 V, about 64.75% of V~DD~). This is one of the motivations behind characterizing PNP Diode for a low current of 5 µA, which generated this voltage.
+
+If I used a larger current, it would have generated an even larger voltage and so, would have eaten up our supply.
+
+Some ways of increasing margin for supply are:
+
+- Characterize PNP Diode for even lower currents (lower than 5 µA) to generate smaller V~BE~.
+- Increase the number of PNP Diodes in parallel in both left and right by the same multiplicity. For example, keep 5 diodes in the left and 40 diodes (5\*8) in the right.
+
+The MOSFETs cannot be adjusted for more margin considering that their sizes are chosen for a minimum V~SD~ of just 60 mV (See [Core Device — 65 nm](../mosfet/parameters.md#core-device-65-nm) table).
+
+## AC Simulations
+
+Now that our current generator portion design is complete, let's look at the long dreaded loop gain to see whether the loop will remain stable.
+
+### Breaking the loop
+
+To that end, we need to break the loop at a suitable point. *Figure-24* shows the breaking of the loop.
+
+![Breaking Loop](./bgr-low-voltage-assets/14_Breaking_Loop_dark.svg#only-dark)
+![Breaking Loop](./bgr-low-voltage-assets/14_Breaking_Loop_light.svg#only-light)
+/// caption
+**Figure-24:** Breaking the feedback loop to measure loop gain
+///
+
+Even though it appears that there are three points where we can break the loop, only the point shown in *Figure-24* breaks the loop while the other two still has some pathway for the signal to return, that is, it doesn't break the loop.
+
+To achieve this in a simulation, we add a really large inductor (say, 1000 H) at the point where I want to break the loop. So, the inductor doesn't disturb DC biasing, while it completely blocks pathway for AC signals.
+
+This is applied in our testbench to measure loop gain as seen in *Figure-25*.
+
+<a id="fig-25"></a>
+
+![Loop Gain Testbench](./bgr-low-voltage-assets/13_01_LoopGain_schematic_NoCap_dark.png#only-dark)
+![Loop Gain Testbench](./bgr-low-voltage-assets/13_01_LoopGain_schematic_NoCap_light.png#only-light)
+/// caption
+**Figure-25:** Loop gain measurement testbench
+///
+
+!!! warning
+    Notice how the signal is coupled using a really large capacitor instead of connecting it directly. This is really important, as connecting an ideal voltage source **dictates** the voltage of that node.
+
+    We don't want that. Instead, we want the DC to be set by the loop, and that DC is blocked with this capacitor.
+
+!!! note
+    This testbench doesn't include the output branch as it is not a part of the loop. I omitted them as I really don't want to include useless portions in a simulation.
+
+    But, the startup is included, as ***it is part of the loop, even though it doesn't disturb the circuit once it turns on***, but still included to see IF it shows any problems in our loop.
+
+### Loop Gain Measurements and Stability
+
+The simulation results of [Figure-25](#fig-25) is seen in *Figure-26*.
+
+<a id="fig-26"></a>
+
+![Loop Gain Response](./bgr-low-voltage-assets/13_02_LoopGain_NoCap_dark.svg#only-dark)
+![Loop Gain Response](./bgr-low-voltage-assets/13_02_LoopGain_NoCap_light.svg#only-light)
+/// caption
+**Figure-26:** Loop Gain Response
+///
+
+The Loop Gain shows a ***good phase margin of 83.6°*** (Noting that the Phase starts at 180° due to three stages). From this, we can rest assured that our loop is stable.
+
+!!! danger "DO NOT ADD A CAPACITOR TO THE OUTPUT OF ERROR AMP"
+    In both [Series BGR](../references/bgr-standard.md#transient-simulation-startup-action) and [BMR](../references/bmr.md#transient-simulation-startup-action), an intentional capacitor was added to the output of error amp to stabilize the loop.
+
+    But that is not necessary here and in fact it is dangerous to add one since the error amp used here is a two stage amplifier as opposed to those two designs which sported a single stage amplifier. Adding a capacitor to the output of a two stage amplifier will pull the output node back to lower frequencies ***eating up phase margin***.
+
+    And in fact, I will show some simulation results where a capacitor is connected to the output of the error amplifier, using both NMOS ([a capacitor to GND](../references/bmr.md#what-happens-with-a-capacitor-to-gnd-or-nmos-capacitor)) and PMOS ([a capacitor to VDD](../references/bmr.md#what-happens-with-a-capacitor-to-vdd-or-pmos-capacitor)) as capacitors.
+
+    ![Loop Gain Response - NMOS Cap](./bgr-low-voltage-assets/13_03_LoopGain_NMOSCap_dark.svg#only-dark)
+    ![Loop Gain Response - NMOS Cap](./bgr-low-voltage-assets/13_03_LoopGain_NMOSCap_light.svg#only-light)
+
+    ![Loop Gain Response - PMOS Cap](./bgr-low-voltage-assets/13_04_LoopGain_PMOSCap_dark.svg#only-dark)
+    ![Loop Gain Response - PMOS Cap](./bgr-low-voltage-assets/13_04_LoopGain_PMOSCap_light.svg#only-light)
+    /// caption
+    **Figure-27:** Loop Gain Response with (a) an NMOS as a capacitor and (b) a PMOS as a capacitor loading the error-amp
+    ///
+
+    Just as we discussed, it eats up phase margin. It is treacherous to add a capacitor to this loop for stability purposes.
+
+## TRANSIENT Simulations
+
+Since we already discussed the stability of the loop, we will directly jump to startup simulation. *Figure-28* shows the complete schematic of Parallel BGR.
+
+<a id="fig-28"></a>
+
+![BGR Schematic Full]()
+/// caption
+**Figure-28:** Complete schematic of Parallel BGR
+///
+
+Notice the NMOS capacitor at the output. It is really important to add one to keep it stable at a specific voltage (We will talk about this shortly).
+
+***To simulate the circuit turning ON case, supply starts to turn ON at 30 ns with a rise time of 20 ns to reach VDD at 50 ns***
+
+And *Figure-29* shows the transient simulation results.
+
+![BGR Startup action](./bgr-low-voltage-assets/05_03_StartupAction_NOCAP_dark.svg#only-dark)
+![BGR Startup action](./bgr-low-voltage-assets/05_03_StartupAction_NOCAP_light.svg#only-light)
+/// caption
+**Figure-29:** Startup transient of [Figure-28](#fig-28). Shows both output of error-amp (VBIASP) and BGR (VBGR)
+///
+
+The noise in output of error-amp (VBIASP) around 50 ns mark is really unaccounted for, since the loop is stable as seen from [Figure-26](#fig-26). This is slightly coupled to even BGR output (VBGR) as well despite the presence of an intentional NMOS capacitor.
+
+So what is causing this?
+
+### Investigating the noise in startup transients
+
+It turns out, this is ***the supply noise coupling onto the output***. And the culprit is our error-amp's compensation scheme.
+
+Looking back at [Figure-02](#fig-02), we see that the compensation capacitor is connected in a way closer to the positive supply rail, which literally allows the supply noise to couple onto the output of error-amp through this (See *Figure-30*).
+
+![Supply Noise Path](./bgr-low-voltage-assets/15_Supply_Noise_Coupling_dark.svg#only-dark)
+![Supply Noise Path](./bgr-low-voltage-assets/15_Supply_Noise_Coupling_light.svg#only-light)
+/// caption
+**Figure-30:** Supply noise coupling path to output of error amp
+///
 

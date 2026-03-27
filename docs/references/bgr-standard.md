@@ -647,7 +647,7 @@ The startup action with this size NMOS as a capacitor is seen in *Figure-26.*
 **Figure-26:** Startup transient with five 8/8 NMOS in parallel (Nominal Capictance of 435.9 fF)
 ///
 
-To simulate the circuit turning ON case, supply starts to turn ON at 30 ns with a rise time of 10 ns to reach V~DD~ at 40 ns.
+***To simulate the circuit turning ON case, supply starts to turn ON at 30 ns with a rise time of 10 ns to reach V~DD~ at 40 ns.***
 
 From *Figure-26* the reference is stable and ON around the 80 ns mark.
 

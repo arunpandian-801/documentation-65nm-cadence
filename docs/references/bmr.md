@@ -241,7 +241,7 @@ Due to this, we will see a sudden spike in the drain currents of BMR, and,
 !!! danger
     The larger the capacitance at this node, the longer it takes to charge it to its operating point, and the greater the magnitude of the current spikes becomes.
 
-*Figure-10* shows this case, where the supply starts to turn ON at 10 ns with a rise time of 20 ns to reach VDD at 30 ns. Here, we can see that there is indeed a current spike around the 20 ns mark where the supply is still in a transient state.
+*Figure-10* shows this case, where ***the supply starts to turn ON at 10 ns with a rise time of 20 ns to reach VDD at 30 ns***. Here, we can see that there is indeed a current spike around the 20 ns mark where the supply is still in a transient state.
 
 ![Startup action with NMOS cap](./bmr-assets/10_StartupAction_NMOSCAP_20by20_5_dark.svg#only-dark)
 ![Startup action with NMOS cap](./bmr-assets/10_StartupAction_NMOSCAP_20by20_5_light.svg#only-light)
@@ -270,7 +270,7 @@ For starters, the capacitance varies heavily with voltage at that node, as backe
 ![PMOS CV Curve](./bmr-assets/09_CV_Curve_PMOS_20by20_dark.svg#only-dark)
 ![PMOS CV Curve](./bmr-assets/09_CV_Curve_PMOS_20by20_light.svg#only-light)
 /// caption
-**Figure-12:** PMOS CV Curve for 20/20 size. (Curve title is wrong as I generated this for both 10/10 and 20/20 at the same time.)
+**Figure-12:** PMOS CV Curve for 20/20 size.
 ///
 
 Especially our operating point of 730 mV is not in strong inversion region and from *Figure-12* we can see that it has a capacitance of 16.1 fF. Not good.

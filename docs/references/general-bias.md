@@ -278,7 +278,7 @@ The output MOSFETs have 10 times the width of standard sizes and so are expected
 
 The BMR possess startup circuit, and it's design is covered in detail in [Startup Circuit Design](../references/bmr.md#startup-circuit-design) section. You may refer to that.
 
-In order to simulate a circuit powering ON, I applied a voltage step to the supply at 10 ns with a rise time of 20 ns to reach VDD (1.2 V) at 30 ns.
+***In order to simulate a circuit powering ON, I applied a voltage step to the supply at 10 ns with a rise time of 20 ns to reach VDD (1.2 V) at 30 ns***.
 
 ![Transient Simulation Results 1](./general-bias-assets/19_01_TRANSim_dark.svg#only-dark)
 ![Transient Simulation Results 1](./general-bias-assets/19_01_TRANSim_light.svg#only-light)
