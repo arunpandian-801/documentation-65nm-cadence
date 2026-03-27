@@ -769,3 +769,46 @@ Since we already know that the culprit is the supply noise, let's quantify the a
 /// caption
 **Figure-32:** PSRR+ response for both output of error-amp (PSRR_VBIASP) and BGR (PSRR_BGR)
 ///
+
+Just as we speculated, the output error-amp (PSRR_VBIASP) trace shows a poor PSRR+ of just 308.85 mdB (or roughly 1) (Not even attenuated!). It's literally passing the supply noise directly onto the output of error-amp. Not good.
+
+Even though the BGR output (PSRR_BGR) shows a decent PSRR+ of -25.94 dB (or 0.056) (Good attenuation), it is acquired **only when NMOS Capacitor has strongly inverted, that is, it starts to behave as a capacitor of nominal value of 20.9 fF**. We saw this issue in [Figure-29](#fig-29).
+
+### Modifications to mitigate supply noise
+
+Our only hope against this is to modify the compensation scheme of [Figure-02](#fig-02) or choose an entirely different topology for error amp. Let's explore both.
+
+!!! warning "Unverified Recommendations"
+    The following topology modifications are proposed based on design intuition and reasoning — they have not been simulated or verified. A rigorous noise analysis is beyond the scope of this documentation.
+
+    If you plan to implement these, conduct independent verification before use.
+
+#### Modifying compensation scheme
+
+In order to save power in [Figure-02](#fig-02), the compensation capacitor, C~c~, was directly connected to the PMOS load of diff-amp. But if we consider the original method, it is buffered through a CG stage as shown in *Figure-33*.
+
+![Compensation using CG buffer](./bgr-low-voltage-assets/17_OriginalCompensationScheme_CGStageBuffer_dark.svg#only-dark)
+![Compensation using CG buffer](./bgr-low-voltage-assets/17_OriginalCompensationScheme_CGStageBuffer_light.svg#only-light)
+/// caption
+**Figure-33:** Buffering the compensation capacitor through a CG stage \[Ref. CMOS Circuit Design, Layout and Simulation, Fig 24.17]
+///
+
+This is a good topology as it keeps the capacitor away from both supply rails and reduce the noise that gets coupled from there. The trade-off is of course, you burn additional power in the added leg.
+
+#### Choosing a different topology for error-amp
+
+Looking back at [Added error amplifier section](../references/bgr-low-voltage.md#added-error-amplifier), we saw that our output of error-amp must swing freely because we're doing current summation, that is, the sourcing PMOS has to source more than 5 µA (I~PTAT~) to accommodate the CTAT current resistors L\*R as well.
+
+And also, this is just a DC Circuit, as in, it just generates a reference voltage and the error-amp doesn't need to be faster.
+
+With this in mind, consider the topology for error-amp shown in *Figure-34*.
+
+![Alternative Topology Error-amp](./bgr-low-voltage-assets/18_AlternativeTopologyForErrorAmp_dark.svg#only-dark)
+![Alternative Topology Error-amp](./bgr-low-voltage-assets/18_AlternativeTopologyForErrorAmp_light.svg#only-light)
+/// caption
+**Figure-34:** Alternative topology for error-amp \[Ref. CMOS Circuit Design, Layout and Simulation, Fig 24.33]
+///
+
+This topology has an output stage which can swing freely, making it ideal for our BGR. Also, compensating the loop can be done just like other designs with a single stage amplifier, by keeping a MOSFET capacitor at the output of error-amp.
+
+Notice that there are no easy path for supply noise to couple onto output of error-amp with this topology.
