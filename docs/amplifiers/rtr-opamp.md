@@ -133,7 +133,7 @@ To that end, the testbench for measuring Open loop response is shown in *Figure-
 ![Open Loop Gain TB](./rtr-opamp-assets/01_Uncompensated_AC_TB_dark.png#only-dark)
 ![Open Loop Gain TB](./rtr-opamp-assets/01_Uncompensated_AC_TB_light.png#only-light)
 /// caption
-**Figure-06:** Opamp schematic with open loop gain measurement configuration. (V~CM~ = 0.6 V)
+**Figure-06:** Opamp schematic with open loop gain measurement configuration. (V~CM~ = 0.6 V) (Biasing from [General Bias Circuit](../references/general-bias.md))
 ///
 
 <a id="fig-07"></a>
@@ -288,7 +288,7 @@ I will put that intent in bullets for you to understand what I mean by this:
 ![Floating Current MOSFET Sizing](./rtr-opamp-assets/12_FloatingCurrSrc_Sizing_TB_dark.png#only-dark)
 ![Floating Current MOSFET Sizing](./rtr-opamp-assets/12_FloatingCurrSrc_Sizing_TB_light.png#only-light)
 /// caption
-**Figure-10:** DC Annotated Floating Current Source sizing test bench.
+**Figure-10:** DC Annotated Floating Current Source sizing test bench. (Biasing from [General Bias Circuit](../references/general-bias.md))
 ///
 
 The sizes chosen in *Figure-10* has become the **new** sizes for our Floating Current Source MOSFETs (LVT).

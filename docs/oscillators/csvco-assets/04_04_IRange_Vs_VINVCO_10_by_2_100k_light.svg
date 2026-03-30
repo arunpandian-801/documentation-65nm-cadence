@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="215.9mm" height="111.125mm"
+ viewBox="0 0 816 420"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
+<title>DC Analysis `dc': Vinvco = (0 -> 1.2)</title>
+<desc>Generated with Qt</desc>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" x1="-192.5" y1="-130" x2="-192.5" y2="-111" id="gradient1">
+    <stop offset="0" stop-color="#000000" stop-opacity="0.470588" />
+    <stop offset="0.8" stop-color="#000000" stop-opacity="0.470588" />
+</linearGradient>
+<linearGradient gradientUnits="userSpaceOnUse" x1="118.5" y1="-12" x2="118.5" y2="7" id="gradient2">
+    <stop offset="0" stop-color="#000000" stop-opacity="0.470588" />
+    <stop offset="0.8" stop-color="#000000" stop-opacity="0.470588" />
+</linearGradient>
+</defs>
+<g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,212,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L580,0 L580,377 L0,377 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#d5d5d5" stroke-opacity="1" stroke-dasharray="1,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="236,6 236,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="284,6 284,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="332,6 332,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="381,6 381,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="429,6 429,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="477,6 477,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="526,6 526,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="574,6 574,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="622,6 622,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="671,6 671,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="719,6 719,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="767,6 767,318 " />
+</g>
+
+<g fill="none" stroke="#ababab" stroke-opacity="1" stroke-dasharray="1,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,317 792,317 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,291 792,291 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,265 792,265 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,239 792,239 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,213 792,213 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,187 792,187 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,161 792,161 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,135 792,135 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,109 792,109 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,83 792,83 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,57 792,57 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,31 792,31 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,6 792,6 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,6 212,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="260,6 260,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="308,6 308,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="357,6 357,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="405,6 405,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="453,6 453,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="502,6 502,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="550,6 550,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="598,6 598,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="647,6 647,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="695,6 695,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="743,6 743,318 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="792,6 792,318 " />
+</g>
+
+<g fill="none" stroke="#ababab" stroke-opacity="1" stroke-dasharray="1,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ababab" stroke-opacity="1" stroke-dasharray="1,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,43)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L580,0 L580,312 L0,312 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#e00000" stroke-opacity="1" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,285.083 0.4825,285.083 0.965,285.083 1.4475,285.083 1.93,285.083 2.4125,285.083 2.895,285.083 3.3775,285.083 3.86,285.083 4.3425,285.083 4.825,285.083 5.3075,285.083 5.79,285.083 6.2725,285.083 6.755,285.083 7.2375,285.083 7.72,285.083 8.2025,285.083 8.685,285.083 9.1675,285.083 9.65,285.083 10.1325,285.083 10.615,285.083 11.0975,285.083 11.58,285.083 12.0625,285.083 12.545,285.083 13.0275,285.083 13.51,285.083 13.9925,285.083 14.475,285.083 14.9575,285.083 15.44,285.083 15.9225,285.083 16.405,285.083 16.8875,285.083 17.37,285.083 17.8525,285.083 18.335,285.083 18.8175,285.083 19.3,285.083 19.7825,285.083 20.265,285.083 20.7475,285.083 21.23,285.083 21.7125,285.083 22.195,285.083 22.6775,285.083 23.16,285.083 23.6425,285.083 24.125,285.083 24.6075,285.083 25.09,285.083 25.5725,285.083 26.055,285.083 26.5375,285.083 27.02,285.083 27.5025,285.083 27.985,285.083 28.4675,285.083 28.95,285.083 29.4325,285.083 29.915,285.083 30.3975,285.083 30.88,285.083 31.3625,285.083 31.845,285.083 32.3275,285.083 32.81,285.083 33.2925,285.083 33.775,285.083 34.2575,285.083 34.74,285.083 35.2225,285.083 35.705,285.083 36.1875,285.083 36.67,285.083 37.1525,285.083 37.635,285.083 38.1175,285.083 38.6,285.082 39.0825,285.082 39.565,285.082 40.0475,285.082 40.53,285.082 41.0125,285.082 41.495,285.082 41.9775,285.082 42.46,285.082 42.9425,285.082 43.425,285.082 43.9075,285.082 44.39,285.082 44.8725,285.082 45.355,285.082 45.8375,285.082 46.32,285.082 46.8025,285.082 47.285,285.082 47.7675,285.082 48.25,285.082 48.7325,285.082 49.215,285.082 49.6975,285.082 50.18,285.082 50.6625,285.082 51.145,285.081 51.6275,285.081 52.11,285.081 52.5925,285.081 53.075,285.081 53.5575,285.081 54.04,285.081 54.5225,285.081 55.005,285.081 55.4875,285.081 55.97,285.081 56.4525,285.081 56.935,285.081 57.4175,285.081 57.9,285.08 58.3825,285.08 58.865,285.08 59.3475,285.08 59.83,285.08 60.3125,285.08 60.795,285.08 61.2775,285.08 61.76,285.08 62.2425,285.079 62.725,285.079 63.2075,285.079 63.69,285.079 64.1725,285.079 64.655,285.079 65.1375,285.079 65.62,285.078 66.1025,285.078 66.585,285.078 67.0675,285.078 67.55,285.078 68.0325,285.078 68.515,285.077 68.9975,285.077 69.48,285.077 69.9625,285.077 70.445,285.077 70.9275,285.076 71.41,285.076 71.8925,285.076 72.375,285.076 72.8575,285.076 73.34,285.075 73.8225,285.075 74.305,285.075 74.7875,285.074 75.27,285.074 75.7525,285.074 76.235,285.074 76.7175,285.073 77.2,285.073 77.6825,285.073 78.165,285.072 78.6475,285.072 79.13,285.072 79.6125,285.071 80.095,285.071 80.5775,285.07 81.06,285.07 81.5425,285.069 82.025,285.069 82.5075,285.069 82.99,285.068 83.4725,285.068 83.955,285.067 84.4375,285.067 84.92,285.066 85.4025,285.065 85.885,285.065 86.3675,285.064 86.85,285.064 87.3325,285.063 87.815,285.062 88.2975,285.062 88.78,285.061 89.2625,285.06 89.745,285.06 90.2275,285.059 90.71,285.058 91.1925,285.057 91.675,285.056 92.1575,285.055 92.64,285.055 93.1225,285.054 93.605,285.053 94.0875,285.052 94.57,285.051 95.0525,285.05 95.535,285.049 96.0175,285.047 96.5,285.046 96.9825,285.045 97.465,285.044 97.9475,285.043 98.43,285.041 98.9125,285.04 99.395,285.038 99.8775,285.037 100.36,285.036 100.843,285.034 101.325,285.032 101.808,285.031 102.29,285.029 102.773,285.027 103.255,285.026 103.738,285.024 104.22,285.022 104.703,285.02 105.185,285.018 105.668,285.016 106.15,285.013 106.633,285.011 107.115,285.009 107.598,285.007 108.08,285.004 108.563,285.002 109.045,284.999 109.528,284.996 110.01,284.993 110.493,284.991 110.975,284.988 111.458,284.985 111.94,284.981 112.423,284.978 112.905,284.975 113.388,284.971 113.87,284.968 114.353,284.964 114.835,284.96 115.318,284.957 115.8,284.953 116.283,284.948 116.765,284.944 117.248,284.94 117.73,284.935 118.213,284.93 118.695,284.926 119.178,284.921 119.66,284.916 120.143,284.91 120.625,284.905 121.108,284.899 121.59,284.893 122.073,284.887 122.555,284.881 123.038,284.875 123.52,284.868 124.003,284.862 124.485,284.855 124.968,284.848 125.45,284.84 125.933,284.833 126.415,284.825 126.898,284.817 127.38,284.809 127.863,284.8 128.345,284.791 128.828,284.782 129.31,284.773 129.793,284.764 130.275,284.754 130.758,284.744 131.24,284.733 131.723,284.722 132.205,284.711 132.688,284.7 133.17,284.688 133.653,284.676 134.135,284.664 134.618,284.651 135.1,284.638 135.583,284.624 136.065,284.61 136.548,284.596 137.03,284.581 137.513,284.566 137.995,284.551 138.478,284.535 138.96,284.518 139.443,284.501 139.925,284.484 140.408,284.466 140.89,284.448 141.373,284.429 141.855,284.41 142.338,284.39 142.82,284.369 143.303,284.348 143.785,284.327 144.268,284.305 144.75,284.282 145.233,284.259 145.715,284.235 146.198,284.21 146.68,284.185 147.163,284.159 147.645,284.132 148.128,284.105 148.61,284.077 149.093,284.048 149.575,284.019 150.058,283.989 150.54,283.958 151.023,283.926 151.505,283.894 151.988,283.86 152.47,283.826 152.953,283.791 153.435,283.755 153.918,283.718 154.4,283.681 154.883,283.642 155.365,283.603 155.848,283.563 156.33,283.521 156.813,283.479 157.295,283.436 157.778,283.391 158.26,283.346 158.743,283.3 159.225,283.253 159.708,283.204 160.19,283.155 160.673,283.104 161.155,283.052 161.638,283 162.12,282.946 162.603,282.89 163.085,282.834 163.568,282.777 164.05,282.718 164.533,282.658 165.015,282.597 165.498,282.535 165.98,282.471 166.463,282.406 166.945,282.34 167.428,282.273 167.91,282.204 168.393,282.134 168.875,282.062 169.358,281.99 169.84,281.915 170.323,281.84 170.805,281.763 171.288,281.685 171.77,281.605 172.253,281.524 172.735,281.441 173.218,281.357 173.7,281.272 174.183,281.185 174.665,281.097 175.148,281.007 175.63,280.916 176.113,280.823 176.595,280.728 177.078,280.633 177.56,280.535 178.043,280.436 178.525,280.336 179.008,280.234 179.49,280.131 179.973,280.026 180.455,279.919 180.938,279.811 181.42,279.701 181.903,279.59 182.385,279.477 182.868,279.363 183.35,279.247 183.833,279.129 184.315,279.01 184.798,278.89 185.28,278.767 185.763,278.644 186.245,278.518 186.728,278.391 187.21,278.263 187.693,278.133 188.175,278.001 188.658,277.868 189.14,277.733 189.623,277.596 190.105,277.458 190.588,277.319 191.07,277.178 191.553,277.035 192.035,276.891 192.518,276.745 193,276.598 193.483,276.449 193.965,276.298 194.448,276.146 194.93,275.993 195.413,275.838 195.895,275.681 196.378,275.523 196.86,275.363 197.343,275.202 197.825,275.039 198.308,274.875 198.79,274.71 199.273,274.543 199.755,274.374 200.238,274.204 200.72,274.032 201.203,273.859 201.685,273.685 202.168,273.509 202.65,273.332 203.133,273.153 203.615,272.973 204.098,272.791 204.58,272.608 205.063,272.424 205.545,272.238 206.028,272.051 206.51,271.862 206.993,271.672 207.475,271.481 207.958,271.288 208.44,271.094 208.923,270.899 209.405,270.702 209.888,270.504 210.37,270.305 210.853,270.104 211.335,269.902 211.818,269.699 212.3,269.495 212.783,269.289 213.265,269.082 213.748,268.874 214.23,268.664 214.713,268.454 215.195,268.242 215.678,268.028 216.16,267.814 216.643,267.599 217.125,267.382 217.608,267.164 218.09,266.945 218.573,266.725 219.055,266.503 219.538,266.281 220.02,266.057 220.503,265.832 220.985,265.606 221.468,265.379 221.95,265.151 222.433,264.922 222.915,264.691 223.398,264.46 223.88,264.227 224.363,263.994 224.845,263.759 225.328,263.523 225.81,263.287 226.293,263.049 226.775,262.81 227.258,262.57 227.74,262.33 228.223,262.088 228.705,261.845 229.188,261.601 229.67,261.357 230.153,261.111 230.635,260.864 231.118,260.617 231.6,260.368 232.083,260.118 232.565,259.868 233.048,259.617 233.53,259.364 234.013,259.111 234.495,258.857 234.978,258.602 235.46,258.346 235.943,258.089 236.425,257.832 236.908,257.573 237.39,257.314 237.873,257.054 238.355,256.793 238.838,256.531 239.32,256.268 239.803,256.004 240.285,255.74 240.768,255.475 241.25,255.209 241.733,254.942 242.215,254.674 242.698,254.406 243.18,254.137 243.663,253.867 244.145,253.596 244.628,253.325 245.11,253.052 245.593,252.779 246.075,252.506 246.558,252.231 247.04,251.956 247.523,251.68 248.005,251.403 248.488,251.126 248.97,250.848 249.453,250.569 249.935,250.289 250.418,250.009 250.9,249.728 251.383,249.447 251.865,249.164 252.348,248.881 252.83,248.598 253.313,248.314 253.795,248.029 254.278,247.743 254.76,247.457 255.243,247.17 255.725,246.882 256.208,246.594 256.69,246.305 257.173,246.016 257.655,245.726 258.138,245.435 258.62,245.144 259.103,244.852 259.585,244.56 260.068,244.266 260.55,243.973 261.033,243.678 261.515,243.384 261.998,243.088 262.48,242.792 262.963,242.496 263.445,242.198 263.928,241.901 264.41,241.602 264.893,241.304 265.375,241.004 265.858,240.704 266.34,240.404 266.823,240.103 267.305,239.801 267.788,239.499 268.27,239.196 268.753,238.893 269.235,238.59 269.718,238.286 270.2,237.981 270.683,237.676 271.165,237.37 271.648,237.064 272.13,236.757 272.613,236.45 273.095,236.142 273.578,235.834 274.06,235.525 274.543,235.216 275.025,234.906 275.508,234.596 275.99,234.286 276.473,233.975 276.955,233.663 277.438,233.351 277.92,233.039 278.403,232.726 278.885,232.413 279.368,232.099 279.85,231.785 280.333,231.47 280.815,231.155 281.298,230.839 281.78,230.523 282.263,230.207 282.745,229.89 283.228,229.573 283.71,229.255 284.193,228.937 284.675,228.618 285.158,228.299 285.64,227.98 286.123,227.66 286.605,227.34 287.088,227.019 287.57,226.698 288.053,226.377 288.535,226.055 289.018,225.733 289.5,225.41 289.983,225.088 290.465,224.764 290.948,224.44 291.43,224.116 291.913,223.792 292.395,223.467 292.878,223.142 293.36,222.816 293.843,222.49 294.325,222.164 294.808,221.837 295.29,221.51 295.773,221.183 296.255,220.855 296.738,220.527 297.22,220.198 297.703,219.869 298.185,219.54 298.668,219.211 299.15,218.881 299.633,218.551 300.115,218.22 300.598,217.889 301.08,217.558 301.563,217.226 302.045,216.894 302.528,216.562 303.01,216.23 303.493,215.897 303.975,215.563 304.458,215.23 304.94,214.896 305.423,214.562 305.905,214.227 306.388,213.893 306.87,213.558 307.353,213.222 307.835,212.886 308.318,212.55 308.8,212.214 309.283,211.877 309.765,211.54 310.248,211.203 310.73,210.866 311.213,210.528 311.695,210.19 312.178,209.851 312.66,209.513 313.143,209.174 313.625,208.834 314.108,208.495 314.59,208.155 315.073,207.815 315.555,207.474 316.038,207.134 316.52,206.793 317.003,206.451 317.485,206.11 317.968,205.768 318.45,205.426 318.933,205.084 319.415,204.741 319.898,204.398 320.38,204.055 320.863,203.712 321.345,203.368 321.828,203.024 322.31,202.68 322.793,202.335 323.275,201.991 323.758,201.646 324.24,201.301 324.723,200.955 325.205,200.609 325.688,200.263 326.17,199.917 326.653,199.571 327.135,199.224 327.618,198.877 328.1,198.53 328.583,198.183 329.065,197.835 329.548,197.487 330.03,197.139 330.513,196.791 330.995,196.442 331.478,196.093 331.96,195.744 332.443,195.395 332.925,195.045 333.408,194.696 333.89,194.346 334.373,193.995 334.855,193.645 335.338,193.294 335.82,192.944 336.303,192.592 336.785,192.241 337.268,191.89 337.75,191.538 338.233,191.186 338.715,190.834 339.198,190.481 339.68,190.129 340.163,189.776 340.645,189.423 341.128,189.07 341.61,188.716 342.093,188.363 342.575,188.009 343.058,187.655 343.54,187.301 344.023,186.946 344.505,186.592 344.988,186.237 345.47,185.882 345.953,185.526 346.435,185.171 346.918,184.815 347.4,184.46 347.883,184.104 348.365,183.747 348.848,183.391 349.33,183.034 349.813,182.678 350.295,182.321 350.778,181.964 351.26,181.606 351.743,181.249 352.225,180.891 352.708,180.533 353.19,180.175 353.673,179.817 354.155,179.458 354.638,179.1 355.12,178.741 355.603,178.382 356.085,178.023 356.568,177.664 357.05,177.304 357.533,176.944 358.015,176.585 358.498,176.225 358.98,175.864 359.463,175.504 359.945,175.144 360.428,174.783 360.91,174.422 361.393,174.061 361.875,173.7 362.358,173.339 362.84,172.977 363.323,172.615 363.805,172.254 364.288,171.892 364.77,171.53 365.253,171.167 365.735,170.805 366.218,170.442 366.7,170.079 367.183,169.717 367.665,169.353 368.148,168.99 368.63,168.627 369.113,168.263 369.595,167.9 370.078,167.536 370.56,167.172 371.043,166.808 371.525,166.443 372.008,166.079 372.49,165.714 372.973,165.35 373.455,164.985 373.938,164.62 374.42,164.255 374.903,163.89 375.385,163.524 375.868,163.159 376.35,162.793 376.833,162.427 377.315,162.061 377.798,161.695 378.28,161.329 378.763,160.962 379.245,160.596 379.728,160.229 380.21,159.862 380.693,159.496 381.175,159.129 381.658,158.761 382.14,158.394 382.623,158.027 383.105,157.659 383.588,157.291 384.07,156.924 384.553,156.556 385.035,156.188 385.518,155.82 386,155.451 386.483,155.083 386.965,154.714 387.448,154.346 387.93,153.977 388.413,153.608 388.895,153.239 389.378,152.87 389.86,152.501 390.343,152.131 390.825,151.762 391.308,151.392 391.79,151.022 392.273,150.653 392.755,150.283 393.238,149.913 393.72,149.543 394.203,149.172 394.685,148.802 395.168,148.431 395.65,148.061 396.133,147.69 396.615,147.319 397.098,146.949 397.58,146.578 398.063,146.206 398.545,145.835 399.028,145.464 399.51,145.093 399.993,144.721 400.475,144.349 400.958,143.978 401.44,143.606 401.923,143.234 402.405,142.862 402.888,142.49 403.37,142.118 403.853,141.745 404.335,141.373 404.818,141.001 405.3,140.628 405.783,140.255 406.265,139.883 406.748,139.51 407.23,139.137 407.713,138.764 408.195,138.391 408.678,138.018 409.16,137.644 409.643,137.271 410.125,136.898 410.608,136.524 411.09,136.151 411.573,135.777 412.055,135.403 412.538,135.029 413.02,134.655 413.503,134.281 413.985,133.907 414.468,133.533 414.95,133.159 415.433,132.785 415.915,132.41 416.398,132.036 416.88,131.662 417.363,131.287 417.845,130.912 418.328,130.538 418.81,130.163 419.293,129.788 419.775,129.413 420.258,129.038 420.74,128.663 421.223,128.288 421.705,127.913 422.188,127.538 422.67,127.162 423.153,126.787 423.635,126.411 424.118,126.036 424.6,125.66 425.083,125.285 425.565,124.909 426.048,124.534 426.53,124.158 427.013,123.782 427.495,123.406 427.978,123.03 428.46,122.654 428.943,122.278 429.425,121.902 429.908,121.526 430.39,121.15 430.873,120.774 431.355,120.398 431.838,120.021 432.32,119.645 432.803,119.269 433.285,118.892 433.768,118.516 434.25,118.139 434.733,117.763 435.215,117.386 435.698,117.01 436.18,116.633 436.663,116.256 437.145,115.88 437.628,115.503 438.11,115.126 438.593,114.75 439.075,114.373 439.558,113.996 440.04,113.619 440.523,113.242 441.005,112.865 441.488,112.488 441.97,112.111 442.453,111.735 442.935,111.358 443.418,110.981 443.9,110.604 444.383,110.227 444.865,109.85 445.348,109.473 445.83,109.096 446.313,108.719 446.795,108.342 447.278,107.964 447.76,107.587 448.243,107.21 448.725,106.833 449.208,106.456 449.69,106.079 450.173,105.702 450.655,105.325 451.138,104.948 451.62,104.571 452.103,104.194 452.585,103.817 453.068,103.44 453.55,103.063 454.033,102.686 454.515,102.309 454.998,101.932 455.48,101.555 455.963,101.179 456.445,100.802 456.928,100.425 457.41,100.048 457.893,99.6714 458.375,99.2947 458.858,98.918 459.34,98.5413 459.823,98.1647 460.305,97.7882 460.788,97.4116 461.27,97.0352 461.753,96.6587 462.235,96.2823 462.718,95.906 463.2,95.5297 463.683,95.1535 464.165,94.7773 464.648,94.4012 465.13,94.0252 465.613,93.6492 466.095,93.2732 466.578,92.8974 467.06,92.5216 467.543,92.1459 468.025,91.7703 468.508,91.3947 468.99,91.0193 469.473,90.6439 469.955,90.2686 470.438,89.8934 470.92,89.5183 471.403,89.1433 471.885,88.7683 472.368,88.3935 472.85,88.0188 473.333,87.6442 473.815,87.2697 474.298,86.8953 474.78,86.521 475.263,86.1468 475.745,85.7728 476.228,85.3989 476.71,85.0251 477.193,84.6515 477.675,84.278 478.158,83.9046 478.64,83.5313 479.123,83.1583 479.605,82.7853 480.088,82.4125 480.57,82.0399 481.053,81.6674 481.535,81.2951 482.018,80.923 482.5,80.551 482.983,80.1792 483.465,79.8076 483.948,79.4362 484.43,79.065 484.913,78.6939 485.395,78.3231 485.877,77.9525 486.36,77.582 486.842,77.2118 487.325,76.8418 487.807,76.472 488.29,76.1025 488.772,75.7331 489.255,75.3641 489.737,74.9952 490.22,74.6266 490.702,74.2583 491.185,73.8902 491.667,73.5223 492.15,73.1548 492.632,72.7875 493.115,72.4205 493.597,72.0537 494.08,71.6873 494.562,71.3212 495.045,70.9553 495.527,70.5898 496.01,70.2246 496.492,69.8597 496.975,69.4952 497.457,69.131 497.94,68.7671 498.422,68.4035 498.905,68.0404 499.387,67.6776 499.87,67.3151 500.352,66.9531 500.835,66.5914 501.317,66.2301 501.8,65.8692 502.282,65.5087 502.765,65.1487 503.247,64.789 503.73,64.4298 504.212,64.0711 504.695,63.7127 505.177,63.3549 505.66,62.9975 506.142,62.6405 506.625,62.2841 507.107,61.9282 507.59,61.5727 508.072,61.2178 508.555,60.8633 509.037,60.5094 509.52,60.1561 510.002,59.8033 510.485,59.451 510.967,59.0993 511.45,58.7482 511.932,58.3977 512.415,58.0477 512.897,57.6984 513.38,57.3497 513.862,57.0016 514.345,56.6542 514.827,56.3074 515.31,55.9613 515.792,55.6158 516.275,55.271 516.757,54.9269 517.24,54.5836 517.722,54.2409 518.205,53.899 518.687,53.5578 519.17,53.2173 519.652,52.8776 520.135,52.5387 520.617,52.2006 521.1,51.8632 521.582,51.5267 522.065,51.191 522.547,50.8562 523.03,50.5221 523.512,50.189 523.995,49.8567 524.477,49.5253 524.96,49.1948 525.442,48.8652 525.925,48.5365 526.407,48.2087 526.89,47.8819 527.372,47.5561 527.855,47.2312 528.337,46.9073 528.82,46.5844 529.302,46.2625 529.785,45.9417 530.267,45.6219 530.75,45.3031 531.232,44.9853 531.715,44.6687 532.197,44.3531 532.68,44.0387 533.162,43.7253 533.645,43.4131 534.127,43.102 534.61,42.792 535.092,42.4832 535.575,42.1756 536.057,41.8691 536.54,41.5639 537.022,41.2598 537.505,40.957 537.987,40.6554 538.47,40.3551 538.952,40.056 539.435,39.7581 539.917,39.4616 540.4,39.1663 540.882,38.8723 541.365,38.5796 541.847,38.2883 542.33,37.9982 542.812,37.7095 543.295,37.4222 543.777,37.1362 544.26,36.8516 544.742,36.5683 545.225,36.2864 545.707,36.006 546.19,35.7269 546.672,35.4492 547.155,35.173 547.637,34.8982 548.12,34.6248 548.602,34.3529 549.085,34.0824 549.567,33.8133 550.05,33.5458 550.532,33.2797 551.015,33.015 551.497,32.7519 551.98,32.4902 552.462,32.2301 552.945,31.9714 553.427,31.7142 553.91,31.4586 554.392,31.2044 554.875,30.9518 555.357,30.7007 555.84,30.4511 556.322,30.2031 556.805,29.9565 557.287,29.7115 557.77,29.4681 558.252,29.2261 558.735,28.9858 559.217,28.7469 559.7,28.5096 560.182,28.2739 560.665,28.0397 561.147,27.807 561.63,27.5759 562.112,27.3463 562.595,27.1183 563.077,26.8918 563.56,26.6669 564.042,26.4435 564.525,26.2217 565.007,26.0014 565.49,25.7826 565.972,25.5654 566.455,25.3497 566.937,25.1356 567.42,24.923 567.902,24.7119 568.385,24.5024 568.867,24.2943 569.35,24.0878 569.832,23.8829 570.315,23.6794 570.797,23.4774 571.28,23.277 571.762,23.078 572.245,22.8806 572.727,22.6846 573.21,22.4902 573.692,22.2972 574.175,22.1057 574.657,21.9157 575.14,21.7271 575.622,21.54 576.105,21.3544 576.587,21.1702 577.07,20.9874 577.552,20.8061 578.035,20.6263 578.517,20.4478 579,20.2708 " />
+</g>
+
+<g fill="none" stroke="#e00000" stroke-opacity="1" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#e00000" stroke-opacity="1" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#e00000" stroke-opacity="1" stroke-width="0.666667" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-3.3936,-3.3936 3.3936,3.3936 " />
+<polyline fill="none" vector-effect="none" points="3.3936,-3.3936 -3.3936,3.3936 " />
+<path vector-effect="none" fill-rule="evenodd" d="M4.8,8.88178e-16 C4.8,2.65097 2.65097,4.8 8.88178e-16,4.8 C-2.65097,4.8 -4.8,2.65097 -4.8,8.88178e-16 C-4.8,-2.65097 -2.65097,-4.8 8.88178e-16,-4.8 C2.65097,-4.8 4.8,-2.65097 4.8,8.88178e-16 "/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="url(#gradient1)" stroke="#606060" stroke-opacity="1" stroke-width="0.666667" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M-186,-129.5 C-189.314,-129.5 -192,-126.814 -192,-123.5 L-192,-117.5 C-192,-114.186 -189.314,-111.5 -186,-111.5 L-117,-111.5 L-3.52758,-3.54347 L-105,-111.5 L-36,-111.5 C-32.6863,-111.5 -30,-114.186 -30,-117.5 L-30,-123.5 C-30,-126.814 -32.6863,-129.5 -36,-129.5 L-186,-129.5"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,503.45,273.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,310.95,143.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,310.95,143.44)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="19" y="14" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >M1: 603.0m 1.16996uA</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,310.95,143.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,310.95,143.44)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#e00000" stroke-opacity="1" stroke-width="0.666667" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="-3.3936,-3.3936 3.3936,3.3936 " />
+<polyline fill="none" vector-effect="none" points="3.3936,-3.3936 -3.3936,3.3936 " />
+<path vector-effect="none" fill-rule="evenodd" d="M4.8,8.88178e-16 C4.8,2.65097 2.65097,4.8 8.88178e-16,4.8 C-2.65097,4.8 -4.8,2.65097 -4.8,8.88178e-16 C-4.8,-2.65097 -2.65097,-4.8 8.88178e-16,-4.8 C2.65097,-4.8 4.8,-2.65097 4.8,8.88178e-16 "/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="url(#gradient2)" stroke="#606060" stroke-opacity="1" stroke-width="0.666667" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M125,-11.5 C121.686,-11.5 119,-8.81371 119,-5.5 L4.9989,-0.105019 L119,0.5 C119,3.81371 121.686,6.5 125,6.5 L275,6.5 C278.314,6.5 281,3.81371 281,0.5 L281,-5.5 C281,-8.81371 278.314,-11.5 275,-11.5 L125,-11.5"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,453.183,304.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,571.683,292.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,571.683,292.475)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#ffffff" fill-opacity="1" stroke="none" xml:space="preserve" x="19" y="14" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >M2: 499.0m 571.225nA</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,571.683,292.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,571.683,292.475)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L137,0 L137,312 L0,312 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<image x="2" y="4" width="12" height="8" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAIAAABChommAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAE0lEQVQYlWN8wEAYMBGhZpgrAgAMlwDw5h6mWAAAAABJRU5ErkJggg==" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="14" y="11" font-family="Luxi Sans" font-size="9.33333" font-weight="400" font-style="normal" 
+ > I_Range</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<image x="104.625" y="2" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXxJREFUKJFjYKA1YETm7L9yhef86af67z99s/z14w+bMD/fIyVp0ZMhvka3UTT8//+fqWHiZpmfv/6GcXCyuH77/lP/9+9/bD9+/HoqIsx7npWZpTvCXfWWmpraT5b///8zrd56zvDp6w91JlrSrka6ypwPnrxlOHvlPgM7G5egrISAzvuPX9UOnHs++f79+2tZzp69x7v9yOV4LRUpD2crdbYzlx8y3Hn4iuHR46cMYkI8DGpKugz83Kzmq7ad+bv0zY+rTGJirL+EBdifiQhy/fjPwMzw4NlnhkvX7jF8+viBgYmJgYHh/3+G///+/eJg53jDwvrnLyMDAwPDnhNXtI6eedApJSZk9vTVF9Fvn98xsjL/Y+Dm5WcQFeT/8vbj5/2PX/6onlIbcBXmaeYV204pX7z6ROnHrz9Jv379tOBgZ5FmY2O7/e3n7ymcLNybOiv8HmEE6////xlXH7jKzf73n5K6suSvT19+fv36Rvq5oyPjHxpHLxIAAOZ2qGC/Q58BAAAAAElFTkSuQmCC" />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="116.625" y="13" font-family="Luxi Sans" font-size="9.33333" font-weight="400" font-style="normal" 
+ > </text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,1,-1,0,203,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,1,-1,0,203,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,1,-1,0,203,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,1,-1,0,203,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 312,0 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="311,0 311,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="285,0 285,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="259,0 259,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="233,0 233,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="207,0 207,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="181,0 181,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="155,0 155,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="129,0 129,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="103,0 103,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="77,0 77,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="51,0 51,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="25,0 25,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 0,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="308,0 308,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="305,0 305,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="303,0 303,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="300,0 300,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="298,0 298,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="295,0 295,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="292,0 292,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="290,0 290,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="287,0 287,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="285,0 285,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="282,0 282,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="279,0 279,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="277,0 277,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="274,0 274,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="272,0 272,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="269,0 269,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="266,0 266,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="264,0 264,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="261,0 261,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="259,0 259,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="256,0 256,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="253,0 253,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="251,0 251,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="248,0 248,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="246,0 246,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="243,0 243,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="241,0 241,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="238,0 238,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="235,0 235,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="233,0 233,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="230,0 230,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="228,0 228,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="225,0 225,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="222,0 222,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="220,0 220,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="217,0 217,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="215,0 215,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,0 212,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="209,0 209,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="207,0 207,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="204,0 204,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="202,0 202,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="199,0 199,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="196,0 196,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="194,0 194,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="191,0 191,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="189,0 189,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="186,0 186,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="184,0 184,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="181,0 181,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="178,0 178,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="176,0 176,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="173,0 173,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="171,0 171,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="168,0 168,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="165,0 165,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="163,0 163,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="160,0 160,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="158,0 158,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="155,0 155,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="152,0 152,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="150,0 150,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="147,0 147,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="145,0 145,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="142,0 142,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="139,0 139,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="137,0 137,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="134,0 134,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="132,0 132,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="129,0 129,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="126,0 126,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="124,0 124,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="121,0 121,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="119,0 119,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="116,0 116,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="114,0 114,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="111,0 111,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="108,0 108,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="106,0 106,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="103,0 103,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="101,0 101,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="98,0 98,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="95,0 95,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="93,0 93,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="90,0 90,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="88,0 88,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="85,0 85,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="82,0 82,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="80,0 80,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="77,0 77,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="75,0 75,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="72,0 72,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="69,0 69,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="67,0 67,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="64,0 64,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="62,0 62,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="59,0 59,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="57,0 57,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="54,0 54,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="51,0 51,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="49,0 49,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="46,0 46,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="44,0 44,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="41,0 41,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="38,0 38,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="36,0 36,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="33,0 33,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="31,0 31,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="28,0 28,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="25,0 25,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="23,0 23,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="20,0 20,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="18,0 18,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="15,0 15,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="12,0 12,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="10,0 10,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="7,0 7,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="5,0 5,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="2,0 2,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 0,8 " />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,1,-1,0,203,49)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-1,1,0,142,223.203)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-1,1,0,142,223.203)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="13" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >I (uA)</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-1,1,0,142,223.203)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,364.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,364.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >-0.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,364.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,364.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,338.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,338.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,338.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,338.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,312.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,312.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,312.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,312.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,286.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,286.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >1.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,286.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,286.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,260.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,260.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >1.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,260.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,260.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,234.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,234.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >2.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,234.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,234.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,208.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,208.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >2.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,208.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,208.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,182.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,182.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >3.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,182.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,182.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,156.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,156.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >3.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,156.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,156.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,130.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,130.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >4.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,130.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,130.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,104.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,104.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >4.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,104.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,104.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,78.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,78.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >5.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,78.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,78.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,53.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,53.5)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >5.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,53.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,162,53.5)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="none" fill-rule="evenodd" d="M0,0 L137,0 L137,16 L0,16 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#c0c0c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="2" y="11" font-family="Luxi Sans" font-size="9.33333" font-weight="400" font-style="normal" 
+ >Name</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="103.328" y="11" font-family="Luxi Sans" font-size="9.33333" font-weight="400" font-style="normal" 
+ >Vis</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="1,42 137,42 " />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 580,0 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,0 0,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="48,0 48,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="96,0 96,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="145,0 145,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="193,0 193,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="241,0 241,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="290,0 290,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="338,0 338,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="386,0 386,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="435,0 435,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="483,0 483,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="531,0 531,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="580,0 580,12 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="4,0 4,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="9,0 9,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="14,0 14,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="19,0 19,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="24,0 24,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="29,0 29,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="33,0 33,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="38,0 38,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="43,0 43,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="48,0 48,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="53,0 53,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="58,0 58,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="62,0 62,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="67,0 67,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="72,0 72,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="77,0 77,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="82,0 82,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="87,0 87,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="91,0 91,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="96,0 96,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="101,0 101,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="106,0 106,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="111,0 111,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="116,0 116,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="120,0 120,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="125,0 125,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="130,0 130,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="135,0 135,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="140,0 140,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="145,0 145,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="149,0 149,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="154,0 154,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="159,0 159,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="164,0 164,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="169,0 169,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="174,0 174,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="178,0 178,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="183,0 183,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="188,0 188,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="193,0 193,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="198,0 198,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="203,0 203,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="207,0 207,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="212,0 212,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="217,0 217,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="222,0 222,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="227,0 227,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="232,0 232,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="236,0 236,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="241,0 241,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="246,0 246,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="251,0 251,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="256,0 256,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="261,0 261,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="265,0 265,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="270,0 270,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="275,0 275,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="280,0 280,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="285,0 285,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="290,0 290,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="294,0 294,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="299,0 299,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="304,0 304,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="309,0 309,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="314,0 314,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="319,0 319,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="323,0 323,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="328,0 328,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="333,0 333,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="338,0 338,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="343,0 343,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="348,0 348,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="352,0 352,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="357,0 357,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="362,0 362,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="367,0 367,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="372,0 372,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="377,0 377,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="381,0 381,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="386,0 386,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="391,0 391,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="396,0 396,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="401,0 401,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="406,0 406,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="410,0 410,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="415,0 415,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="420,0 420,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="425,0 425,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="430,0 430,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="435,0 435,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="439,0 439,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="444,0 444,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="449,0 449,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="454,0 454,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="459,0 459,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="464,0 464,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="468,0 468,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="473,0 473,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="478,0 478,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="483,0 483,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="488,0 488,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="493,0 493,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="497,0 497,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="502,0 502,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="507,0 507,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="512,0 512,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="517,0 517,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="522,0 522,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="526,0 526,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="531,0 531,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="536,0 536,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="541,0 541,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="546,0 546,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="551,0 551,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="555,0 555,8 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="560,0 560,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="565,0 565,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="570,0 570,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="575,0 575,4 " />
+<polyline fill="none" vector-effect="non-scaling-stroke" points="580,0 580,4 " />
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,212,367)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,483,400)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,483,400)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="13" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >Vinvco</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,483,400)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,203,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,203,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,203,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,203,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,251,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,251,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.1</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,251,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,251,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,299,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,299,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.2</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,299,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,299,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,348,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,348,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.3</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,348,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,348,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,395.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,395.5,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.4</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,395.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,395.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,444,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,444,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.5</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,444,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,444,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,493,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,493,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.6</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,493,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,493,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,540.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,540.5,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.7</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,540.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,540.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,589,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,589,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.8</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,589,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,589,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,638,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,638,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >0.9</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,638,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,638,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,685.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,685.5,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >1.0</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,685.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,685.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,733.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,733.5,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >1.1</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,733.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,733.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,782.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,782.5,397)"
+font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Default" font-size="13.3333" font-weight="400" font-style="normal" 
+ >1.2</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,782.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,782.5,397)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,137,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,137,26)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="none" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M0,0 L813,0 L813,26 L0,26 L0,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="17" font-family="Default" font-size="13.3333" font-weight="550" font-style="normal" 
+ >DC Analysis `dc': Vinvco = (0 -&gt;</text>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="34" font-family="Default" font-size="13.3333" font-weight="550" font-style="normal" 
+ >1.2)</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,1,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="17" font-family="Default" font-size="13.3333" font-weight="550" font-style="normal" 
+ >1</text>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,797,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Open Sans" font-size="11" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+</svg>
