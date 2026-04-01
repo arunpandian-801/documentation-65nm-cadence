@@ -264,6 +264,8 @@ If the VCCS is off, that is V~in,VCO~ is so low, then, you have only the current
 
 The benefit of this modification is **it sets a lower frequency limit (i.e. a lower current limit) regardless of input voltage** and so, the TF seems to get an offset.
 
+<a id="fig-10"></a>
+
 ![TF Offset](./csvco-assets/14_TFwithNewLowerLimit_dark.svg#only-dark)
 ![TF Offset](./csvco-assets/14_TFwithNewLowerLimit_light.svg#only-light)
 /// caption
@@ -495,6 +497,8 @@ From our previous discussions, the number of stages being 7 may put us slightly 
 
 The testbench for measuring Transfer function for CS-VCO of [Figure-23](#fig-23) is shown in *Figure-24*.
 
+<a id="fig-24"></a>
+
 ![CS-VCO Testbench - 1](./csvco-assets/05_03_CSVCO_ITR1_TestBench_schematic_dark.png#only-dark)
 ![CS-VCO Testbench - 1](./csvco-assets/05_03_CSVCO_ITR1_TestBench_schematic_light.png#only-light)
 /// caption
@@ -516,6 +520,98 @@ Some observations:
 - Just as we speculated, our output tuning range doesn't include our target frequency of 500 MHz.
 - The achieved center frequency is 510.74 MHz.
 - Our upper limit seems to be 0.95 V as beyond that, our curve seems to bend a little.
-- Our TF is very linear with an output tuning range of **505.5 MHz to 521.5 MHz**.
+- Our TF is very linear with an output tuning range of **505.5 MHz to 521.5 MHz, 16 MHz range**.
 
 We need to somehow shift this curve to lower range to include our target frequency of 500 MHz.
+
+Let's iterate.
+
+### Iteration 2 - Adjusting lower limit NMOS
+
+Clearly, from the discussion on [Fixing the lower limit](#fixing-a-lower-limit-to-output-frequency-by-adding-a-constant-current-to-input-controlled-current) section, we see that the knob that adjusts the output frequency lower limit to include 500 MHz is the lower limit NMOS.
+
+This was clearly explained in [Figure-10](#fig-10). \[Meanwhile, the range is still set by our input VCCS NMOS along with degeneration resistor R~range~. And from [Iteration 1](#iteration-1-using-calculated-values), it resulted in a range of 16 MHz.]
+
+But the question is, ***by how much should you adjust this lower limit NMOS***?
+
+We are aware, that the input current sets the output frequency. Right now, it is voltage controlled.
+
+!!! tip
+    ***What if we completely substituted it with an ideal current source and stepped through several values around 20 µA to find a suitable value?***
+
+This is far better than mindlessly sizing the lower limit NMOS.
+
+To that end, the input current generator portion is completely removed to allow attaching of a current source as shown in *Figure-26*.
+
+![Modified Current Generator](./csvco-assets/06_01_CurrentGenerator_Modified_CurrentInput_dark.png#only-dark)
+![Modified Current Generator](./csvco-assets/06_01_CurrentGenerator_Modified_CurrentInput_light.png#only-light)
+/// caption
+**Figure-26:** Modifying the current generator portion to allow direct connection to an ideal current source
+///
+
+And then, the testbench directly inputs a current instead of a voltage source to the VCO Cell of [Figure-23](#fig-23), as shown in *Figure-27*.
+
+![Testbench for TF vs Iin](./csvco-assets/06_02_CSVCO_ITR2_TestBench_CurrentInput_dark.png#only-dark)
+![Testbench for TF vs Iin](./csvco-assets/06_02_CSVCO_ITR2_TestBench_CurrentInput_light.png#only-light)
+/// caption
+**Figure-27:** Testbench to generate TF curve Vs I~in,VCO~ (Input current)
+///
+
+Let's step the current source around 20 µA. Let's step from 18 µA to 21 µA in steps of 0.5 µA to get a TF Curve Vs I~in,VCO~.
+
+The results of such a simulation is seen in *Figure-28*.
+
+<a id="fig-28"></a>
+
+![TF vs IinVCO](./csvco-assets/01_CSVCO_TF_02_TFVsCurrent_dark.svg#only-dark)
+![TF vs IinVCO](./csvco-assets/01_CSVCO_TF_02_TFVsCurrent_light.svg#only-light)
+/// caption
+**Figure-28:** Transfer function of CS-VCO of [Figure-23](#fig-23) for current input
+///
+
+---
+
+Clearly, a change of 0.5 µA in input current yields a change of roughly 10 MHz in it's output frequency. And we know from [Iteration 1](#iteration-1-using-calculated-values), the range of output frequencies is 16 MHz.
+
+So, if we want to include 500 MHz near the center frequency, we can't afford to reduce current by 0.5 µA, as that will bring the frequency down by 10 MHz as the range is just 16 MHz.
+
+!!! danger "Confused as to why reducing by 0.5 µA is bad?"
+    Think about it, if I reduced the lower limit current by 0.5 µA, then, from [Figure-28](#fig-28), the new lower limit is 489 MHz. And with a range of 16 MHz, the output frequencies will vary from 489.8 MHz to 505.8 MHz, which puts 500 MHz close to upper limit, making the XOR DPLL difficult to lock onto it.
+
+    Recall that the XOR Phase Detector has an average output of V~DD~\/2 (0.6 V) when the PLL has obtained lock. And this mandates that our target 500 MHz be mapped to an input voltage near V~DD~\/2.
+
+So, our only option is to reduce Lower limit current by 0.25 µA. I know this is ridiculous, but it is what we can do right now.
+
+!!! note
+    This also highlights how difficult it is to set a desired output frequency as the center frequency in a practical CS-VCO. It is really hard to do this when we fabricate.
+
+#### New lower limit and TF curve
+
+Following the above discussion, I have adjusted the size of lower limit NMOS to `63.1/10 (4.1 µm/ 650 nm)`. And the resulting current can be seen in the DC annotated schematic of *Figure-29*.
+
+![New Lower Limit NMOS Schematic](./csvco-assets/06_03_ITR2_LowerLimit_NMOS_63_1_by_10_PullDown_DCAnnotatedSchematic_dark.png#only-dark)
+![New Lower Limit NMOS Schematic](./csvco-assets/06_03_ITR2_LowerLimit_NMOS_63_1_by_10_PullDown_DCAnnotatedSchematic_light.png#only-light)
+/// caption
+**Figure-29:** New lower limit current for adjusted pull-down NMOS of `63.1/10 (4.1 µm/ 650 nm)`
+///
+
+!!! warning
+    Notice that I haven't precisely made the current to be 0.25 µA less than 20 µA. This is a futile thing to do, considering that the MOSFET may suffer from process variations. So, some rough value should be fine.
+
+Changing the lower limit NMOS of [Figure-23](#fig-23) with `63.1/10 (4.1 µm/ 650 nm)`, and then using the testbench of [Figure-24](#fig-24) yields the transfer curve of *Figure-30*.
+
+![TF ITR2](./csvco-assets/01_CSVCO_TF_03_TFFinalLowerLimitAdjusted_dark.svg#only-dark)
+![TF ITR2](./csvco-assets/01_CSVCO_TF_03_TFFinalLowerLimitAdjusted_light.svg#only-light)
+/// caption
+**Figure-30:** Transfer function of CS-VCO of [Figure-23](#fig-23) with lower limit NMOS size adjusted to `63.1/10 (4.1 µm/ 650 nm)`
+///
+
+The new transfer function has a center frequency that is close to 500 MHz. This is satisfactory and we will stop the iteration here.
+
+The obtained output frequency range is **495.5 MHz to 512 MHz** over an input voltage range of 0.4 V to 1.0 V.
+
+The gain of this VCO is,
+
+\[Gain ~of ~CSVCO, A_{CSVCO} = 2\pi * \frac{512M - 495.5M}{1 - 0.4}\]
+
+\[A_{CSVCO} = 2\pi * 27.5 ~MHz/V = 172.79 ~Mrad/sV\]
