@@ -398,28 +398,44 @@ And the complete schematic of current generator is shown in *Figure-19*.
 **Figure-19:** Final schematic of Voltage controlled Current generator portion
 ///
 
+Let's see how this performs. The currents generated when input voltage is swept are shown in *Figure-20*.
+
+![Input sweep results 270k](./csvco-assets/04_06_currentGenerator_270k_dark.svg#only-dark)
+![Input sweep results 270k](./csvco-assets/04_06_currentGenerator_270k_light.svg#only-light)
+/// caption
+**Figure-20:** Input Voltage sweep Vs (a) Range Current and (b) Total Current for R~range~ of 270k (Figure-19)
+///
+
+The output currents are very linear, with the total current having a lower limit close to 20.05 µA as seen in *Figure-20(b)*. The range current is 2 µA as we designed it, and the variations in total current is 1 µA just as explained in [Current Variation with input Voltage](#current-variation-with-input-voltage) section.
+
+Again, from *Figure-20*, our acceptable input voltage range is from 0.3 V to 1.0 V just as explained in [Current Variation with input Voltage](#current-variation-with-input-voltage) section.
+
+Notice how 0.6 V is present in the linear portion of the curve. This is really important as we want V~DD~\/2 (0.6 V) to be in the linear operating region and not in the non-linear region as XOR Phase detector average output in locked state is V~DD~\/2.
+
 ## Fixing the number of stages for Ring Oscillator
 
 Now that our current generator design is complete, it's about time we found the number of stages needed for a center frequency of 500 MHz. Even though our target current is 20 µA for center frequency, it would be better if we found the actual current in the current starved inverter to reduce the errors in our hand calculations.
 
-The current starved inverter schematic is shown in *Figure-20*.
+The current starved inverter schematic is shown in *Figure-21*.
+
+<a id="fig-21"></a>
 
 ![CS Inverter schematic](./csvco-assets/05_01_CSInverter_schematic_dark.png#only-dark)
 ![CS Inverter schematic](./csvco-assets/05_01_CSInverter_schematic_light.png#only-light)
 /// caption
-**Figure-20:** Current Starved Inverter cell schematic (Sizes from [Table-01](#table-01))
+**Figure-21:** Current Starved Inverter cell schematic (Sizes from [Table-01](#table-01))
 ///
 
-Clearly, from *Figure-20* the current in the inverter cell is controlled by *VBP* and *VBN* voltages which are generated using the principle of current mirror. ***And this is exactly why, instead of using 20 µA, we will find the actual current in the inverter using simulations to account for errors in current mirror***.
+Clearly, from *Figure-21* the current in the inverter cell is controlled by *VBP* and *VBN* voltages which are generated using the principle of current mirror. ***And this is exactly why, instead of using 20 µA, we will find the actual current in the inverter using simulations to account for errors in current mirror***.
 
 ### Finding actual current in Current Starved Inverter
 
-To that, see the testbench for finding current in inverter shown below. 
+To that end, see the testbench for finding current in inverter shown below. 
 
 ![Current in Inverter](./csvco-assets/04_05_CurrentInInverter_DCAnnotatedSchematic_dark.png#only-dark)
 ![Current in Inverter](./csvco-assets/04_05_CurrentInInverter_DCAnnotatedSchematic_light.png#only-light)
 /// caption
-**Figure-21:** DC Annotated testbench to find current in inverter (Sizes from [Table-01](#table-01) and [Table-02](#table-02)) (V~in,VCO~ = 0.6 V to find center current)
+**Figure-22:** DC Annotated testbench to find current in inverter (Sizes from [Table-01](#table-01) and [Table-02](#table-02)) (V~in,VCO~ = 0.6 V to find center current)
 ///
 
 This is nothing but a partial schematic of [Figure-01](#fig-01).
@@ -427,4 +443,79 @@ This is nothing but a partial schematic of [Figure-01](#fig-01).
 Some commentary:
 
 - Input voltage is 0.6 V, as [Equation-01](#eqn-01) is used with center frequency and current used for center frequency. And for XOR DPLL, VCO TF is chosen to have the center frequency at V~DD~\/2 (0.6 V) as XOR Phase detector average output in locked state is V~DD~\/2.
-- Generated current is 20.54 µA as seen in PM1.
+- Notice how the Inverter's pull-up and pull-down paths are turned ON by appropriately giving GND and V~DD~ to PM3 and NM4. This is important as only when we do this, we allow a current to flow in the inverter, which is needed to compute the number of stages.
+- Also, the output of inverter is forced to V~DD~\/2 (0.6 V) by an ideal voltage source. This is also important, as this let's us to estimate the average current in the inverter by creating a symmetric operating condition.
+- Clearly, the generated current is 20.54 µA (PM1) and ***the final current in the inverter is 17.79 µA (PM2) and 17.51 µA (NM3)***.
+
+This is exactly what we need.  
+The pull-up current is 17.79 µA while the pull-down current is 17.51 µA.
+
+So, the final current in the inverter is just the average of these two:
+
+<a id="eqn-03"></a>
+
+\[\tag{3} Average ~Current ~in ~inverter, I_{D,avg} = \frac{17.79 \mu + 17.51 \mu}{2} = 17.65 ~\mu A\]
+
+### Computing the number of stages, N
+
+From [Equation-01](#eqn-01), we can write,
+
+\[N = \frac{I_{D,avg}}{f_{osc} * C_{tot} * V_{DD}}\]
+
+where, I~D,avg~ is 17.65 µA ([Equation-03](#eqn-03)), f~osc~ is 500 MHz, C~tot~ is 4.052 fF ([Equation-02](#eqn-02)) and V~DD~ is 1.2 V.
+
+Therefore,
+
+\[N = \frac{17.65 \mu}{500M * 4.052f * 1.2} = \lfloor 7.26 \rfloor = 7\]
+
+So, the number of stages in the CS-VCO is 7.
+
+!!! note
+    We need 7.26 stages to have an output frequency close to 500 MHz, but 0.26 stage doesn't make any sense and hence we floored it's value to nearest odd number, being 7.
+
+    What this means? We may need to iterate to bring 500 MHz into our range of output frequencies.
+
+## TRANSIENT Simulations
+
+The schematic of CS-VCO with 7 stages of current starved ring topology is shown in *Figure-23*.
+
+<a id="fig-23"></a>
+
+![CS-VCO schematic - 1](./csvco-assets/05_02_CSVCO_ITR1_schematic_dark.png#only-dark)
+![CS-VCO schematic - 1](./csvco-assets/05_02_CSVCO_ITR1_schematic_light.png#only-light)
+/// caption
+**Figure-23:** CS-VCO schematic with 7 stages (Sizes from [Table-01](#table-01) and [Table-02](#table-02), Current starved Inverters from [Figure-21](#fig-21))
+///
+
+Notice how two normal inverters (sizes from [Table-01](#table-01)) are attached between the actual output and the output of ring oscillator. This will make sure to clean the output waveform into nice square waves.
+
+From our previous discussions, the number of stages being 7 may put us slightly away from 500 MHz, making it necessary to iterate.
+
+### Iteration 1 - Using calculated values
+
+The testbench for measuring Transfer function for CS-VCO of [Figure-23](#fig-23) is shown in *Figure-24*.
+
+![CS-VCO Testbench - 1](./csvco-assets/05_03_CSVCO_ITR1_TestBench_schematic_dark.png#only-dark)
+![CS-VCO Testbench - 1](./csvco-assets/05_03_CSVCO_ITR1_TestBench_schematic_light.png#only-light)
+/// caption
+**Figure-24:** Testbench to plot transfer function of CS-VCO of [Figure-23](#fig-23)
+///
+
+Now all we have to do is to step through the input voltage from 0.4 V to 1.0 V in steps of 0.05 V and then measure of output frequency of resulting waveforms.
+
+The transfer function generated in this way is shown in *Figure-25*.
+
+![TF ITR1](./csvco-assets/01_CSVCO_TF_01_StockSize_dark.svg#only-dark)
+![TF ITR1](./csvco-assets/01_CSVCO_TF_01_StockSize_light.svg#only-light)
+/// caption
+**Figure-25:** Transfer function of CS-VCO of [Figure-23](#fig-23)
+///
+
+Some observations:
+
+- Just as we speculated, our output tuning range doesn't include our target frequency of 500 MHz.
+- The achieved center frequency is 510.74 MHz.
+- Our upper limit seems to be 0.95 V as beyond that, our curve seems to bend a little.
+- Our TF is very linear with an output tuning range of **505.5 MHz to 521.5 MHz**.
+
+We need to somehow shift this curve to lower range to include our target frequency of 500 MHz.
