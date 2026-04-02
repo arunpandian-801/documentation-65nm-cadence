@@ -161,7 +161,9 @@ Follow along, you will find that this value is a good starting point.
     In order to back this statement, see the refined procedure below which I became capable of giving, only after fully designing it.
 
     ??? example "Refined procedure to find a value for this range current"
-        This is not the way the documentation follows, but is the refined procedure developed through experience. Much of the design in CS-VCO of [Figure-01](#fig-01) revolves around the input VCCS.
+        This is not the way the documentation follows, but is the refined procedure developed through experience. The documentation follows the actual journey I took in designing this, but this refinement is something I concocted after completing the design of CS-VCO. 
+        
+        Now, much of the design in CS-VCO of [Figure-01](#fig-01) revolves around the input VCCS.
 
         And you need a range of current to even start designing the said VCCS. So, using [Substitution theorem](../references/bmr.md#substitution-theorem), ***why not just replace the entire current generator portion with an ideal current source to conduct some abstract simulations to find a reasonable estimate?***
 
@@ -171,11 +173,21 @@ Follow along, you will find that this value is a good starting point.
         **Figure-04:** Testbench to figure out the input current range
         ///
 
-        With this substitution highlighted in *Figure-04*, **step through various current values** for the ideal current source to generate the transfer curve as shown in Figure ---. Then you will know, how much sensitive your CS-VCO is, and then define a suitable constraint on the input current range.
+        With this substitution highlighted in *Figure-04*, **step through various current values** for the ideal current source to generate the transfer curve as shown in [Figure-28](#fig-28). 
+        
+        And in order to do that, you need to know how many stages is needed to construct an abstract CS-VCO. For this, you know that you have taken a current of 20 µA from [Estimating minimum current section](#estimating-minimum-current-in-current-starved-inverter). But from the discussion on [Finding actual current in Current Starved Inverter section](#finding-actual-current-in-current-starved-inverter) you will come to know that the current in the inverter will not be exactly 20 µA.
+        
+        So, you will set to out find the actual current in inverter, by using the testbench illustrated in [Figure-22](#fig-22). And then you will follow the discussion on [Computing the number of stages section](#computing-the-number-of-stages-n) to get the value for N. 
+        
+        And then, you generate [Figure-28](#fig-28) from which you will come to know, how much sensitive your CS-VCO is, and then define a suitable constraint on the input current range.
 
         Again, the constraint gets defined by the requirements for the VCO by the overall system. In my case, this is being built for use in an XOR DPLL, which itself paints a constraint on centre frequency of 500 MHz, and an output range of no more than 10 MHz around this frequency.
 
         And then you choose a current range with the above discussions and you try designing it. See the result. Is it satisfactory? Good. If not, just re-iterate.
+
+        ---
+
+        Feeling confused? I understand this jumbled instruction is confusing. ***Why not revisit this section after you complete this documentation? I am sure, that you will understand that this is the refined way to design this, after you finish this documentation.***
 
 ### Sizing a wide NMOS
 
@@ -434,6 +446,8 @@ Clearly, from *Figure-21* the current in the inverter cell is controlled by *VBP
 
 To that end, see the testbench for finding current in inverter shown below. 
 
+<a id="fig-22"></a>
+
 ![Current in Inverter](./csvco-assets/04_05_CurrentInInverter_DCAnnotatedSchematic_dark.png#only-dark)
 ![Current in Inverter](./csvco-assets/04_05_CurrentInInverter_DCAnnotatedSchematic_light.png#only-light)
 /// caption
@@ -600,6 +614,8 @@ Following the above discussion, I have adjusted the size of lower limit NMOS to 
 
 Changing the lower limit NMOS of [Figure-23](#fig-23) with `63.1/10 (4.1 µm/ 650 nm)`, and then using the testbench of [Figure-24](#fig-24) yields the transfer curve of *Figure-30*.
 
+<a id="fig-30"></a>
+
 ![TF ITR2](./csvco-assets/01_CSVCO_TF_03_TFFinalLowerLimitAdjusted_dark.svg#only-dark)
 ![TF ITR2](./csvco-assets/01_CSVCO_TF_03_TFFinalLowerLimitAdjusted_light.svg#only-light)
 /// caption
@@ -615,3 +631,54 @@ The gain of this VCO is,
 \[Gain ~of ~CSVCO, A_{CSVCO} = 2\pi * \frac{512M - 495.5M}{1 - 0.4}\]
 
 \[A_{CSVCO} = 2\pi * 27.5 ~MHz/V = 172.79 ~Mrad/sV\]
+
+### Sample output waveform
+
+For completeness sake, let's look at a sample output waveform for V~in,VCO~ = 0.6 V (V~DD~\/2) shown in *Figure-31*.
+
+![Sample output](./csvco-assets/16_OUTPUT_VinVCO_600mV_dark.svg#only-dark)
+![Sample output](./csvco-assets/16_OUTPUT_VinVCO_600mV_light.svg#only-light)
+/// caption
+**Figure-31:** Output waveform for input voltage of 0.6 V (V~DD~\/2)
+///
+
+The waveform looks clean, thanks to the normal inverters attached to the output.
+
+Let's make a rough estimate for output frequency from *Figure-31* and cross-verify it with [Figure-30](#fig-30). The waveform in *Figure-31* has markers attached to rough points marking one cycle, suitable to make an estimate for output frequency.
+
+\[f_{out} = \frac{1}{18.755 ~ns - 16.759 ~ns} = \frac{1}{1.996 ~ns} = 501 ~MHz\]
+
+Looking at [Figure-30](#fig-30), we know that this f~out~ is close to 500.94 MHz. Such errors are inevitable considering we eyeballed our time points for a rough estimate, which once again asserts the accuracy of measurement function implemented in SPICE (SPECTRE), and why you should use that to generate the TF curve.
+
+## Conclusion
+
+The design of CS-VCO is complete. The final design choices are summarized in *Table-03*.
+
+| Instance | Value | Comment |
+|----------|-------|---------|
+| Input VCCS NMOS | 66.2/1 | Actual Dimensions: (4.3 µm / 65 nm) |
+| Lower Limit NMOS | 63.1/10 | Actual Dimensions: (4.1 µm / 650 nm) |
+| R~range~ | 270 kΩ | For low Gain |
+/// caption
+**Table-03:** Current Generator instance values final summary
+///
+
+And the parameters of CS-VCO are summarized in *Table-04*
+
+| Parameter | Value | Comments |
+|-----------|-------|----------|
+| A~CSVCO~ | 172.79 Mrad/sV | or 27.5 MHz/V |
+| f~center~ | 500.94 MHz | For V~in,VCO~ = V~DD~\/2 = 0.6 V |
+| f~out,range~ | 16.5 MHz | From 495.5 MHz to 512 MHz |
+| V~in,VCO,range~ | 0.55 V | From 0.4 V to 0.95 V |
+/// caption
+**Table-04:** CS-VCO Parameter summary
+///
+
+## QUCS-S / NGSPICE simulations
+
+This circuit is also built and tested in [QUCS-S](https://ra3xdh.github.io/) / [NGSPICE](https://ngspice.sourceforge.io/) and the simulation results are available in [this document](https://drive.google.com/file/d/1uIFN824dnry-0Lew2EGDRM32LWuTWo4b/view?usp=sharing).
+
+!!! note
+    - QUCS-S/NGSPICE doc uses slightly different sizes for simulation. It is also correct and yields a center frequency of 511 MHz. Unlike the design here, it didn't received another iteration to include 500 MHz in it's output tuning range.
+    - The gain is also higher than this design: 215.41 Mrad/sV (or 34.283 MHz/V) due to R~range~ being 216 kΩ. The output range is from 504.8 MHz to 525.3 MHz. This is too much gain and range for an XOR DPLL, but nevertheless, since it is a functional design, it is mentioned here, with ***the associated remarks regarding this design noted in this comment***.

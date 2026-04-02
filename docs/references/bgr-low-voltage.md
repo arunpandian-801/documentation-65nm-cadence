@@ -797,6 +797,11 @@ In order to save power in [Figure-02](#fig-02), the compensation capacitor, C~c~
 
 This is a good topology as it keeps the capacitor away from both supply rails and reduce the noise that gets coupled from there. The trade-off is of course, you burn additional power in the added leg.
 
+!!! warning
+    You might want to derive a seperate bias voltage for CG buffer stage. In *Figure-33*, it derives it's bias voltage from common-mode of input voltage. But when the circuit is yet to turn ON, the common-mode of input is at GND, ***cutting OFF the compensation path.***
+
+    This may result in some ringing and temporary unstable state till the common-mode of input rises high enough to turn ON the compensation path, essentially increasing phase margin by pole splitting and stabilizing the circuit. This is bad, and must be avoided by a dedicated bias leg for this CG stage.
+
 #### Choosing a different topology for error-amp
 
 Looking back at [Added error amplifier section](../references/bgr-low-voltage.md#added-error-amplifier), we saw that our output of error-amp must swing freely because we're doing current summation, that is, the sourcing PMOS has to source more than 5 µA (I~PTAT~) to accommodate the CTAT current resistors L\*R as well.

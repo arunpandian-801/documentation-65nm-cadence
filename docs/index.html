@@ -508,7 +508,7 @@
       <span class="stat-label">Custom CMOS Process</span>
     </div>
     <div class="stat">
-      <span class="stat-val">4</span>
+      <span class="stat-val">6</span>
       <span class="stat-label">Analog Blocks Simulated</span>
     </div>
     <div class="stat">
@@ -516,8 +516,8 @@
       <span class="stat-label">Core Supply (VDD)</span>
     </div>
     <div class="stat">
-      <span class="stat-val">74.3 dB</span>
-      <span class="stat-label">Op-Amp Gain · Short-Channel · 10kΩ‖10pF</span>
+      <span class="stat-val">74.9 dB</span>
+      <span class="stat-label">Op-Amp Gain · Short-Channel · 10kΩ‖10pF load</span>
     </div>
     <div class="stat">
       <span class="stat-val">19.4 ppm/°C</span>
@@ -577,9 +577,38 @@
           <div class="card-title">Rail-to-Rail Op-Amp</div>
           <div class="card-desc">Folded cascode, parallel NMOS+PMOS input stages, Class AB output. Characterised across all three CMR regions under 10 kΩ ‖ 10 pF load.</div>
           <div class="card-specs">
-            <span class="spec-tag">Gain 66.5–74.3 dB</span>
-            <span class="spec-tag">UGB 47.9–97.7 MHz</span>
-            <span class="spec-tag">PM 54–75°</span>
+            <span class="spec-tag">Gain 67.1–74.9 dB</span>
+            <span class="spec-tag">UGB 47.5–96.9 MHz</span>
+            <span class="spec-tag">PM 54°–75°</span>
+            <span class="spec-tag">Core 65nm</span>
+          </div>
+        </a>
+
+        <a href="http://localhost:8000/references/general-bias/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Sep 2025</div>
+          <div class="card-title">General Bias Circuit</div>
+          <div class="card-desc">Derives wide swing cascode current source and sink bias voltages plus Class AB output stage bias from BMR. Supply-independent biasing for all analog blocks.</div>
+          <div class="card-specs">
+            <span class="spec-tag">Wide swing cascode bias</span>
+            <span class="spec-tag">Class AB Bias</span>
+            <span class="spec-tag">IBIAS = 10 µA</span>
+            <span class="spec-tag">VDD,min = 0.7 V</span>
+            <span class="spec-tag">1.2 V</span>
+            <span class="spec-tag">Core 65nm</span>
+          </div>
+        </a>
+
+        <a href="http://localhost:8000/references/bmr/" class="project-card">
+          <div class="card-arrow">↗</div>
+          <div class="card-date">Sep 2025</div>
+          <div class="card-title">Beta Multiplier Reference</div>
+          <div class="card-desc">Resistor-based, self-biased supply-independent current reference. Generates 10 µA bias current for all subsequent analog blocks.</div>
+          <div class="card-specs">
+            <span class="spec-tag">IBIAS = 10 µA</span>
+            <span class="spec-tag">VDD,min = 0.7 V</span>
+            <span class="spec-tag">Supply Independent</span>
+            <span class="spec-tag">1.2 V</span>
             <span class="spec-tag">Core 65nm</span>
           </div>
         </a>
