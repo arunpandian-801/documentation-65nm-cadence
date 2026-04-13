@@ -82,6 +82,8 @@ nav:
 
   - Oscillators:
     - Current Starved Ring VCO: oscillators/csvco.md
+  
+  - Errata: miscellaneous/errata.md
 
 # ── PLUGINS ────────────────────────────────────────────────────────────────────
 plugins:
