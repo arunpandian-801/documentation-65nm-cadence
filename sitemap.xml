@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/amplifiers/rtr-opamp/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/includes/disclaimer/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/miscellaneous/errata/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/mosfet/BJT-parameters/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/mosfet/parameters/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/oscillators/csvco/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/references/bgr-low-voltage/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/references/bgr-standard/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/references/bmr/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://arunpandian-801.github.io/documentation-65nm-cmos/references/general-bias/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
 </urlset>
